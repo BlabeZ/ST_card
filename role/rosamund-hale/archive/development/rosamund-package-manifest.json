@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "packageVersion": "3.0.0",
+  "runtimeLorebookName": "rosamund-complete-lorebook",
+  "output": "rosamund-complete-lorebook.json",
+  "outputEntries": 62,
+  "outputSha256": "7fc466c0accca85e647aa2ee3ecaaf1c35af14a4f7e42eb6f717486fffc2dbe5",
+  "installArtifacts": [
+    {
+      "file": "rosamund-hale.character.json",
+      "sha256": "b1b8a5775e1ff239fdb5e635aeec6580bdc970d88485940cac1066793bb5dba0"
+    },
+    {
+      "file": "rosamund-complete-lorebook.json",
+      "sha256": "7fc466c0accca85e647aa2ee3ecaaf1c35af14a4f7e42eb6f717486fffc2dbe5"
+    },
+    {
+      "file": "rosamund-quick-replies.json",
+      "sha256": "528b667d33970ec88e12195cf40030798ab6aeedc85c2d7660278fc44dad4d23"
+    }
+  ],
+  "sources": [
+    {
+      "file": "archive/development/sources/rosamund-city-lorebook.json",
+      "entries": 12,
+      "group": "rosamund-city",
+      "sha256": "d5a69d8de9d914c1e4c91992b23dbf6a2593416fc6f8d3a5607d455d4a7c3a1c"
+    },
+    {
+      "file": "archive/development/sources/rosamund-factions-lorebook.json",
+      "entries": 12,
+      "group": "rosamund-factions",
+      "sha256": "1594f1c1c387179abd124320f86553925805e3916e7f9df35002d87db3b9e3f3"
+    },
+    {
+      "file": "archive/development/sources/rosamund-cast-lorebook.json",
+      "entries": 9,
+      "group": "rosamund-cast",
+      "sha256": "69ff5b9618661451da085a24c0ea93d7d78764db0f42eee903396734b0e4baab"
+    },
+    {
+      "file": "archive/development/sources/rosamund-rules-lorebook.json",
+      "entries": 11,
+      "group": "rosamund-rules",
+      "sha256": "7ce8912459d8a5d8313728bf1cb2d7cf60ce8d62568c2dcfac5f01b9c8d3d78e"
+    },
+    {
+      "file": "archive/development/sources/rosamund-core-cases-lorebook.json",
+      "entries": 12,
+      "group": "rosamund-core-case",
+      "sha256": "d6225aade0e6418c8961fc7cfd08f06666279a32a5c11aad0e1ce0ae6dc12fc5"
+    },
+    {
+      "file": "archive/development/sources/rosamund-hale-story-stages-lorebook.json",
+      "entries": 6,
+      "group": "rosamund-story-stage",
+      "sha256": "a5622d3f8bec93d7a45563ea05699c020dedce70640372791e47b00a9308ed9d"
+    }
+  ]
+}

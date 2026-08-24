@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>Code Review Report · st/role/rosamund-hale</title>
+<meta name="generator" content="ThunderSoft code-review skill" />
+<style>
+:root {
+  --wine-dark: #6B0F1A; --wine-primary: #8B1A2B; --wine-mid: #A0303F;
+  --wine-light: #C76070; --wine-pale: #F2D5DA; --wine-bg: #FDF5F6;
+  --text-primary: #2D2D2D; --text-secondary: #5A5A5A;
+  --white: #FFFFFF; --gray-100: #F7F7F7; --gray-200: #E8E8E8; --gray-300: #D1D1D1;
+  --critical: #c0392b; --major: #e67e22; --minor: #27ae60; --question: #2980b9;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', sans-serif;
+  background: var(--gray-100); color: var(--text-primary); line-height: 1.6;
+}
+body::before {
+  content: 'Confidential'; position: fixed; top: 50%; left: 50%;
+  transform: translate(-50%, -50%) rotate(-35deg); font-size: 120px;
+  font-weight: 900; color: rgba(139,26,43,0.04); pointer-events: none; z-index: 9999;
+  white-space: nowrap; letter-spacing: 20px;
+}
+.watermark-grid { position: fixed; top:0; left:0; right:0; bottom:0; pointer-events: none; z-index: 9998; overflow: hidden; }
+.watermark-grid span { position: absolute; font-size: 14px; font-weight: 600; color: rgba(139,26,43,0.035); transform: rotate(-35deg); white-space: nowrap; }
+.cover {
+  background: linear-gradient(135deg, var(--wine-dark) 0%, var(--wine-primary) 40%, var(--wine-mid) 100%);
+  color: var(--white); padding: 60px 40px; text-align: center; position: relative;
+}
+.cover h1 { font-size: 36px; font-weight: 700; margin-bottom: 8px; }
+.cover .subtitle { font-size: 18px; opacity: 0.85; margin-bottom: 24px; }
+.cover .meta { display: flex; justify-content: center; gap: 40px; font-size: 14px; opacity: 0.85; flex-wrap: wrap; }
+.cover .meta span { display: flex; align-items: center; gap: 6px; }
+.cover .logo { position: absolute; top: 20px; right: 30px; font-size: 12px; opacity: 0.6; letter-spacing: 2px; }
+.cover .applied-rules { margin-top: 20px; font-size: 12px; opacity: 0.75; }
+.container { max-width: 1200px; margin: 0 auto; padding: 30px 20px; position: relative; z-index: 1; }
+.section-title {
+  font-size: 22px; font-weight: 700; color: var(--wine-primary);
+  margin: 30px 0 16px; padding-left: 12px; border-left: 4px solid var(--wine-primary);
+}
+.section-title .num { color: var(--wine-mid); margin-right: 6px; }
+.summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 30px; }
+.summary-card {
+  background: var(--white); border-radius: 12px; padding: 20px; text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-top: 4px solid var(--wine-primary);
+  transition: transform 0.2s;
+}
+.summary-card:hover { transform: translateY(-2px); }
+.summary-card .label { font-size: 12px; color: var(--text-secondary); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1px; }
+.summary-card .value { font-size: 32px; font-weight: 700; color: var(--wine-primary); }
+.summary-card .value.grade { font-size: 42px; color: var(--question); }
+.summary-card .value.grade-A { color: var(--minor); }
+.summary-card .value.grade-B { color: var(--question); }
+.summary-card .value.grade-C { color: var(--major); }
+.summary-card .value.grade-D { color: var(--critical); }
+.summary-card .value.critical { color: var(--critical); }
+.summary-card .value.major { color: var(--major); }
+.summary-card .value.minor { color: var(--minor); }
+.summary-card .sub { font-size: 11px; color: var(--text-secondary); margin-top: 4px; }
+.charts { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 30px; }
+.chart-box { background: var(--white); border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.chart-box h3 { font-size: 16px; color: var(--wine-primary); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--wine-pale); }
+.chart-box canvas { max-height: 320px !important; }
+.dim-card { background: var(--white); border-radius: 10px; margin-bottom: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); overflow: hidden; }
+.dim-card.na { opacity: 0.65; }
+.dim-header { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; cursor: pointer; transition: background 0.2s; flex-wrap: wrap; gap: 8px; }
+.dim-header:hover { background: var(--wine-bg); }
+.dim-title { font-weight: 600; font-size: 16px; display: flex; align-items: center; gap: 10px; }
+.expand-icon { font-size: 12px; transition: transform 0.3s; display: inline-block; color: var(--wine-mid); }
+.dim-header.expanded .expand-icon { transform: rotate(90deg); }
+.dim-meta { display: flex; gap: 16px; font-size: 13px; align-items: center; flex-wrap: wrap; }
+.score-good { color: var(--minor); font-weight: 700; font-size: 18px; }
+.score-warn { color: var(--major); font-weight: 700; font-size: 18px; }
+.score-bad  { color: var(--critical); font-weight: 700; font-size: 18px; }
+.score-na   { color: var(--text-secondary); font-weight: 600; font-size: 14px; font-style: italic; }
+.issue-count, .check-info, .weight-info { color: var(--text-secondary); }
+.dim-body { padding: 0 20px 16px; }
+.issue-item { padding: 12px 16px; margin-bottom: 8px; border-radius: 8px; background: var(--gray-100); border-left: 4px solid var(--gray-300); font-size: 14px; }
+.issue-item.sev-critical-l { border-left-color: var(--critical); }
+.issue-item.sev-major-l    { border-left-color: var(--major); }
+.issue-item.sev-minor-l    { border-left-color: var(--minor); }
+.issue-item .issue-desc { font-size: 13px; color: var(--text-secondary); margin: 6px 0; }
+.issue-item .code-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 8px 0; }
+.issue-item .code-pair > div > .lbl { font-size: 11px; color: var(--text-secondary); margin-bottom: 2px; text-transform: uppercase; letter-spacing: 1px; }
+.issue-item .code-block { padding: 8px 12px; background: #2D2D2D; color: #E8E8E8; border-radius: 6px; font-family: 'Consolas','Courier New',monospace; font-size: 12px; overflow-x: auto; white-space: pre; line-height: 1.5; }
+.issue-item .code-block.before { border-left: 3px solid var(--critical); }
+.issue-item .code-block.after  { border-left: 3px solid var(--minor); }
+.issue-item .fix-hint { font-size: 12px; color: var(--wine-mid); margin-top: 6px; font-style: italic; }
+.severity-badge { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+.sev-critical { background: #FDECEA; color: var(--critical); }
+.sev-major    { background: #FFF3E0; color: var(--major); }
+.sev-minor    { background: #E8F5E9; color: var(--minor); }
+.sev-question { background: #E3F2FD; color: var(--question); }
+.table-controls { display: flex; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+.table-controls select, .table-controls input { padding: 8px 14px; border: 1px solid var(--gray-300); border-radius: 8px; font-size: 13px; background: var(--white); }
+.table-container { background: var(--white); border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { background: var(--wine-primary); color: var(--white); padding: 12px 14px; text-align: left; cursor: pointer; user-select: none; white-space: nowrap; }
+th:hover { background: var(--wine-dark); }
+td { padding: 10px 14px; border-bottom: 1px solid var(--gray-200); vertical-align: top; }
+tr:hover td { background: var(--wine-bg); }
+code { font-family: 'Consolas','Courier New',monospace; font-size: 12px; }
+.snippet { display: inline-block; max-width: 320px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.roadmap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.roadmap-card { background: var(--white); border-radius: 12px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.roadmap-card h3 { font-size: 15px; color: var(--wine-primary); margin-bottom: 10px; }
+.roadmap-card ul { padding-left: 18px; font-size: 13px; }
+.roadmap-card li { margin-bottom: 6px; color: var(--text-secondary); }
+.roadmap-card .eta { margin-top: 12px; font-size: 12px; color: var(--wine-mid); font-weight: 600; }
+.boundary-banner { background: var(--wine-bg); border-left: 4px solid var(--wine-primary); padding: 14px 18px; border-radius: 8px; margin: 16px 0; font-size: 13px; color: var(--text-secondary); }
+.boundary-banner strong { color: var(--wine-primary); }
+.no-issues { color: var(--minor); font-style: italic; padding: 12px 0; }
+.footer { text-align: center; padding: 30px; color: var(--text-secondary); font-size: 12px; margin-top: 40px; border-top: 1px solid var(--gray-200); position: relative; z-index: 1; }
+.footer .conf { color: var(--wine-primary); font-weight: 700; letter-spacing: 2px; }
+@media (max-width: 768px) {
+  .charts { grid-template-columns: 1fr; }
+  .summary { grid-template-columns: repeat(2, 1fr); }
+  .roadmap { grid-template-columns: 1fr; }
+  .cover h1 { font-size: 24px; }
+  .issue-item .code-pair { grid-template-columns: 1fr; }
+}
+@media print {
+  body::before { font-size: 80px; }
+  .dim-body { display: block !important; }
+  .expand-icon { display: none; }
+}
+</style>
+<script src="./chart.min.js"></script>
+<script>
+if (typeof Chart === 'undefined') {
+  document.write('<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"><\/script>');
+}
+</script>
+</head>
+<body>
+
+<div class="watermark-grid" id="watermarkGrid"></div>
+
+<!-- 封面 -->
+<div class="cover">
+  <div class="logo">THUNDERSOFT &middot; CONFIDENTIAL</div>
+  <h1>Code Review 质量审查报告</h1>
+  <div class="subtitle">st / role/rosamund-hale</div>
+  <div class="meta">
+    <span>📅 审查时间：2026-08-24 16:31</span>
+    <span>🌿 分支：main</span>
+    <span>🔖 Commit：d7f54ba + local changes</span>
+    <span>👤 审查人：OpenCode Code Review</span>
+    <span>🔍 扫描模式：本地改动 + 未跟踪完整目录</span>
+  </div>
+  <div class="applied-rules">应用规则集：Common 9维度 113+项, SillyTavern 1.18 STscript/World Info 官方语义, Rosamund package invariants</div>
+</div>
+
+<div class="container">
+
+<!-- §1 执行摘要 + 边界提示 -->
+<h2 class="section-title"><span class="num">§1</span>执行摘要</h2>
+<div class="boundary-banner">
+  <strong>评审边界</strong> · 本报告只覆盖 <strong>编码规范 / 设计规范 / 历史 Bug Root Cause 逻辑检查</strong>；
+  不覆盖架构设计 / Bug Fix / 功能验收。
+</div>
+<div class="summary">
+  <div class="summary-card"><div class="label">综合评分</div><div class="value">8.5</div><div class="sub">/ 10</div></div>
+  <div class="summary-card"><div class="label">评级</div><div class="value grade grade-B">B</div><div class="sub">CL 评分 0</div></div>
+  <div class="summary-card"><div class="label">Critical</div><div class="value critical">0</div><div class="sub">🔴 Must Fix · P0</div></div>
+  <div class="summary-card"><div class="label">Major</div><div class="value major">10</div><div class="sub">🟡 Suggestion · P1</div></div>
+  <div class="summary-card"><div class="label">Minor</div><div class="value minor">3</div><div class="sub">🟢 Nice to have · P2</div></div>
+  <div class="summary-card"><div class="label">Q / Praise</div><div class="value">0</div><div class="sub">💡 👍 · P3</div></div>
+</div>
+
+<!-- §2 数据可视化 (4 图) -->
+<h2 class="section-title"><span class="num">§2</span>数据可视化</h2>
+<div class="charts">
+  <div class="chart-box"><h3>九大维度雷达图</h3><canvas id="radarChart"></canvas></div>
+  <div class="chart-box"><h3>维度得分 &amp; 问题数对比</h3><canvas id="barChart"></canvas></div>
+  <div class="chart-box"><h3>问题严重等级分布</h3><canvas id="pieChart"></canvas></div>
+  <div class="chart-box"><h3>维度权重占比</h3><canvas id="weightChart"></canvas></div>
+</div>
+
+<!-- §3 各维度详细分析 -->
+<h2 class="section-title"><span class="num">§3</span>九大维度详细分析</h2>
+<div class="dim-card"><div class="dim-header" onclick="toggleCard(this)"><div class="dim-title"><span class="expand-icon">&#9654;</span>维度1·空安全与边界防护</div><div class="dim-meta"><span class="score-good">10.0/10</span><span class="weight-info">权重 20%</span><span class="issue-count">🔴 0 · 🟡 0 · 🟢 0 · 💡 0</span></div></div><div class="dim-body" style="display:none;"><p class="no-issues">✅ 未发现问题</p></div></div>
+<div class="dim-card na"><div class="dim-header" onclick="toggleCard(this)"><div class="dim-title"><span class="expand-icon">&#9654;</span>维度2·线程安全与同步机制</div><div class="dim-meta"><span class="score-na">N/A · 本模块不适用</span><span class="weight-info">权重 14%</span><span class="issue-count">🔴 0 · 🟡 0 · 🟢 0 · 💡 0</span></div></div><div class="dim-body" style="display:none;"><p class="no-issues" style="color:var(--text-secondary)">本维度在当前模块不适用 (N/A), 不计入加权评分。</p></div></div>
+<div class="dim-card"><div class="dim-header" onclick="toggleCard(this)"><div class="dim-title"><span class="expand-icon">&#9654;</span>维度3·资源与内存管理</div><div class="dim-meta"><span class="score-good">9.0/10</span><span class="weight-info">权重 20%</span><span class="issue-count">🔴 0 · 🟡 1 · 🟢 0 · 💡 0</span></div></div><div class="dim-body" style="display:none;"><div class="issue-item sev-major-l"><span class="severity-badge sev-major">Major</span> <strong>[3.15] 结案历史注入无上限增长</strong> — <code>role/rosamund-hale/rosamund-quick-replies.json:225</code><div class="issue-desc">每次结案把摘要追加到 rh_case_history，并将完整累计历史作为 system 注入。无限动态案件会持续挤占上下文、增加延迟和聊天元数据体积。180 字只是模型指令，没有客户端长度校验。</div><div class="code-pair"><div><div class="lbl">原代码</div><pre class="code-block before">/addvar key=rh_case_history ... | /inject id=rh_case_continuity ... {{getvar::rh_case_history}}</pre></div><div><div class="lbl">修复后</div><pre class="code-block after">仅注入最近 3-5 案摘要和固定尺寸聚合状态；旧记录保存在提示上下文之外，并提供重建/清理按钮。</pre></div></div><div class="fix-hint">💡 为长期沙盒设置明确容量和淘汰策略，并用 /tokens 或 /len 实际校验摘要尺寸。</div></div></div></div>
+<div class="dim-card"><div class="dim-header" onclick="toggleCard(this)"><div class="dim-title"><span class="expand-icon">&#9654;</span>维度4·代码逻辑与语法规范</div><div class="dim-meta"><span class="score-bad">5.7/10</span><span class="weight-info">权重 14%</span><span class="issue-count">🔴 0 · 🟡 4 · 🟢 1 · 💡 0</span></div></div><div class="dim-body" style="display:none;"><div class="issue-item sev-major-l"><span class="severity-badge sev-major">Major</span> <strong>[4.17] 长案件缺少持久化的活动案件状态账本</strong> — <code>role/rosamund-hale/rosamund-quick-replies.json:149,225</code><div class="issue-desc">rh_active_case 只保存初始幕后档案。已取得线索、排除方向、NPC 状态、伤势和时间主要依赖聊天历史；早期消息离开模型上下文后可能被遗忘或重置。</div><div class="code-pair"><div><div class="lbl">原代码</div><pre class="code-block before">案件板只保存到 rh_case_board 并作为普通助手消息发送。</pre></div><div><div class="lbl">修复后</div><pre class="code-block after">使用固定 id=rh_active_case_state 的有界注入，覆盖保存已发现线索 ID、公开 NPC 状态、代价、时间和未决路线。</pre></div></div><div class="fix-hint">💡 把活动状态作为有界、可重建的唯一账本，并显式传给案件板和结算生成。</div></div>
+<div class="issue-item sev-major-l"><span class="severity-badge sev-major">Major</span> <strong>[4.24] 关键状态更新不是事务式或可恢复的</strong> — <code>role/rosamund-hale/rosamund-quick-replies.json:187,206,225,339,358</code><div class="issue-desc">启动、结案、五轴和限定改案都要顺序写多个变量与注入。脚本中止、切换聊天或页面刷新可能留下变量和注入不一致，部分流程随后又会拒绝重试。</div><div class="code-pair"><div><div class="lbl">原代码</div><pre class="code-block before">先写 rh_case_file 或 closed，再更新其余变量和 injection。</pre></div><div><div class="lbl">修复后</div><pre class="code-block after">使用 candidate 变量与 rh_txn_kind/rh_txn_phase 日志；终态最后写入；流程可重复执行，并增加诊断/恢复按钮和成功后的强制保存。</pre></div></div><div class="fix-hint">💡 让关键流程幂等并可恢复，避免出现变量是新档案但模型仍收到旧注入的 split-brain 状态。</div></div>
+<div class="issue-item sev-major-l"><span class="severity-badge sev-major">Major</span> <strong>[4.13] 核心案件使用模糊查找但未核对返回身份</strong> — <code>role/rosamund-hale/rosamund-quick-replies.json:206</code><div class="issue-desc">/findentry 是模糊匹配。旧版、缺条目、重复 comment 或被编辑的世界书可能返回相近案件；当前仅检查 content 非空，然后按玩家所选标题启动。</div><div class="code-pair"><div><div class="lbl">原代码</div><pre class="code-block before">/findentry ... | /getentryfield ... field=content</pre></div><div><div class="lbl">修复后</div><pre class="code-block after">保存返回 uid，先读取 comment 与所选值做完全相等校验，再读取 content，并确认正文以预期 GH-XX 开头。</pre></div></div><div class="fix-hint">💡 避免错误档案被静默标记为另一个案件，是整合书版本预检的一部分。</div></div>
+<div class="issue-item sev-major-l"><span class="severity-badge sev-major">Major</span> <strong>[4.17] 动态标题与核心案件共用完成状态命名空间</strong> — <code>role/rosamund-hale/rosamund-quick-replies.json:206,225</code><div class="issue-desc">所有案件标题都写入 rh_completed_cases，核心门槛使用 substring in。动态案件若采用核心标题或包含该标题，可能误判核心已完成，甚至提前解锁 GH-12。</div><div class="code-pair"><div><div class="lbl">原代码</div><pre class="code-block before">/addvar key=rh_completed_cases {{getvar::rh_case_name}}</pre></div><div><div class="lbl">修复后</div><pre class="code-block after">核心案件使用 rh_completed_core 对象，以 GH-01..GH-12 为固定键；动态案件使用独立递增 ID，显示标题只作为数据。</pre></div></div><div class="fix-hint">💡 控制键和显示文本必须分离，核心完成状态应使用精确键查询。</div></div>
+<div class="issue-item sev-minor-l"><span class="severity-badge sev-minor">Minor</span> <strong>[4.24] 剧情阶段存在两个独立权威来源</strong> — <code>role/rosamund-hale/rosamund-quick-replies.json:299-301</code><div class="issue-desc">rh_story_stage 决定按钮案件，世界书启用条目决定模型秘密边界；手工同步失败时二者会指向不同阶段。</div><div class="code-pair"><div><div class="lbl">原代码</div><pre class="code-block before">设置剧情阶段只写 rh_story_stage，并提示手工切换世界书。</pre></div><div><div class="lbl">修复后</div><pre class="code-block after">整合书中由阶段 QR 同时更新变量和六个阶段条目的 disable 状态，或至少执行一致性检测并阻止启动。</pre></div></div><div class="fix-hint">💡 同一个状态应只有一个权威来源，或拥有自动一致性校验。</div></div></div></div>
+<div class="dim-card"><div class="dim-header" onclick="toggleCard(this)"><div class="dim-title"><span class="expand-icon">&#9654;</span>维度5·性能与体验优化</div><div class="dim-meta"><span class="score-good">9.7/10</span><span class="weight-info">权重 8%</span><span class="issue-count">🔴 0 · 🟡 0 · 🟢 1 · 💡 0</span></div></div><div class="dim-body" style="display:none;"><div class="issue-item sev-minor-l"><span class="severity-badge sev-minor">Minor</span> <strong>[5.1] 19 个 Quick Reply 全部常驻显示</strong> — <code>role/rosamund-hale/rosamund-quick-replies.json:9-370</code><div class="issue-desc">日常按钮、剧透、清案、强制阶段、五轴和限定改案都在同一栏展示，移动端操作拥挤，也增加误触破坏性操作的概率。</div><div class="code-pair"><div><div class="lbl">原代码</div><pre class="code-block before">19 个条目全部 isHidden=false。</pre></div><div><div class="lbl">修复后</div><pre class="code-block after">主栏保留常用状态、骰子和 HP；案件管理、剧透、阶段、五轴与改案放入二级预设或上下文菜单。</pre></div></div><div class="fix-hint">💡 属于可选体验优化，不影响当前静态正确性。</div></div></div></div>
+<div class="dim-card"><div class="dim-header" onclick="toggleCard(this)"><div class="dim-title"><span class="expand-icon">&#9654;</span>维度6·兼容性、安全与工程规范</div><div class="dim-meta"><span class="score-warn">6.0/10</span><span class="weight-info">权重 8%</span><span class="issue-count">🔴 0 · 🟡 4 · 🟢 0 · 💡 0</span></div></div><div class="dim-body" style="display:none;"><div class="issue-item sev-major-l"><span class="severity-badge sev-major">Major</span> <strong>[6.3] 尚未提供用户要求的单一整合世界书</strong> — <code>role/rosamund-hale/README.md:5-47</code><div class="issue-desc">完整安装仍要求六份外部世界书，角色卡还带三条嵌入世界书。当前目录没有整合产物，不能按用户期望完成‘角色卡 + 一份世界书 + Quick Reply’安装。</div><div class="code-pair"><div><div class="lbl">原代码</div><pre class="code-block before">分别导入城市、组织、配角、规则、核心案件和阶段世界书。</pre></div><div><div class="lbl">修复后</div><pre class="code-block after">导入 rosamund-complete-lorebook.json，并将它绑定到当前角色或聊天；完整安装时跳过卡内基础 Lore 导入。</pre></div></div><div class="fix-hint">💡 生成一份包含 62 条外部条目的规范整合世界书，并明确卡内嵌入 Lore 在完整安装时是否跳过。</div></div>
+<div class="issue-item sev-major-l"><span class="severity-badge sev-major">Major</span> <strong>[6.3] Quick Reply 硬编码旧核心案件世界书名称</strong> — <code>role/rosamund-hale/rosamund-quick-replies.json:205-206</code><div class="issue-desc">核心案件通过固定名称 rosamund-core-cases-lorebook 调用 /findentry 与 /getentryfield。整合书若采用新名称，12 个核心案件全部无法启动。</div><div class="code-pair"><div><div class="lbl">原代码</div><pre class="code-block before">/findentry file=rosamund-core-cases-lorebook field=comment ...</pre></div><div><div class="lbl">修复后</div><pre class="code-block after">/findentry file=rosamund-complete-lorebook field=comment ...</pre></div></div><div class="fix-hint">💡 确定整合书唯一名称后，同时更新 Quick Reply、角色卡、规则、README 和 OOC 文档，并在初始化时做已知条目预检。</div></div>
+<div class="issue-item sev-major-l"><span class="severity-badge sev-major">Major</span> <strong>[6.2] 缺少旧聊天迁移、导出和注入重建流程</strong> — <code>role/rosamund-hale/README.md:204-210</code><div class="issue-desc">新聊天恢复说明只覆盖名字、阶段和五轴，没有恢复已结案件、案件摘要、技能成长、伤势、NPC/组织状态或变量与 injection 的一致性，也没有 schema version。</div><div class="code-pair"><div><div class="lbl">原代码</div><pre class="code-block before">开始新聊天时需要重新初始化，并补入需要继承的名字、阶段和五轴状态。</pre></div><div><div class="lbl">修复后</div><pre class="code-block after">加入 rh_schema_version、状态导出/导入、诊断迁移 QR，以及从权威变量重建四个固定 injection 的流程。</pre></div></div><div class="fix-hint">💡 版本升级和长会话换档前必须能检测孤儿变量、旧格式数组和缺失注入。</div></div>
+<div class="issue-item sev-major-l"><span class="severity-badge sev-major">Major</span> <strong>[6.3] 尚未完成真实 SillyTavern 导入和按钮烟测</strong> — <code>role/rosamund-hale/README.md:204-221</code><div class="issue-desc">目前验证仅覆盖 JSON、静态不变量和闭包计数，没有在目标 SillyTavern 1.18 UI 中验证导入、STscript 参数、注入顺序、停止脚本、切换聊天和 API 失败分支。</div><div class="code-pair"><div><div class="lbl">原代码</div><pre class="code-block before">尚未在本工作区内运行真实 SillyTavern UI。</pre></div><div><div class="lbl">修复后</div><pre class="code-block after">固定一个 SillyTavern 版本/提交，执行并记录初始化、核心启动、动态锁定、结案、清案、阶段、五轴、限定改案及错误/中断矩阵。</pre></div></div><div class="fix-hint">💡 这是发布前必须完成的运行时验收；静态检查不能证明 STscript 在真实 UI 中按预期执行。</div></div></div></div>
+<div class="dim-card"><div class="dim-header" onclick="toggleCard(this)"><div class="dim-title"><span class="expand-icon">&#9654;</span>维度7·代码风格与命名规范</div><div class="dim-meta"><span class="score-good">9.7/10</span><span class="weight-info">权重 8%</span><span class="issue-count">🔴 0 · 🟡 0 · 🟢 1 · 💡 0</span></div></div><div class="dim-body" style="display:none;"><div class="issue-item sev-minor-l"><span class="severity-badge sev-minor">Minor</span> <strong>[7.9] 案件目录和阶段映射多处重复且无生成校验</strong> — <code>role/rosamund-hale/rosamund-quick-replies.json:205-206</code><div class="issue-desc">案件标题与阶段关系同时存在于核心书、阶段书、规则目录、Quick Reply、创作者文档中。目前内容一致，但手工修改容易漂移。</div><div class="code-pair"><div><div class="lbl">原代码</div><pre class="code-block before">六处分别维护 GH 编号、标题和阶段映射。</pre></div><div><div class="lbl">修复后</div><pre class="code-block after">建立一份案件 manifest，由它生成整合书索引和 QR 映射，或至少提供仓库内 validator 做交叉断言。</pre></div></div><div class="fix-hint">💡 整合世界书时同时建立可复现构建与校验，避免两个发布文件组合不兼容。</div></div></div></div>
+<div class="dim-card na"><div class="dim-header" onclick="toggleCard(this)"><div class="dim-title"><span class="expand-icon">&#9654;</span>维度8·IPC 通信安全</div><div class="dim-meta"><span class="score-na">N/A · 本模块不适用</span><span class="weight-info">权重 6%</span><span class="issue-count">🔴 0 · 🟡 0 · 🟢 0 · 💡 0</span></div></div><div class="dim-body" style="display:none;"><p class="no-issues" style="color:var(--text-secondary)">本维度在当前模块不适用 (N/A), 不计入加权评分。</p></div></div>
+<div class="dim-card"><div class="dim-header" onclick="toggleCard(this)"><div class="dim-title"><span class="expand-icon">&#9654;</span>维度9·序列化与数据格式</div><div class="dim-meta"><span class="score-good">9.0/10</span><span class="weight-info">权重 6%</span><span class="issue-count">🔴 0 · 🟡 1 · 🟢 0 · 💡 0</span></div></div><div class="dim-body" style="display:none;"><div class="issue-item sev-major-l"><span class="severity-badge sev-major">Major</span> <strong>[9.1] 直接合并会发生 entries 键与 uid 冲突</strong> — <code>role/rosamund-hale/rosamund-city-lorebook.json:2-4</code><div class="issue-desc">六份源世界书都从 entries[&#x27;0&#x27;] 和 uid=0 开始。直接对象合并最多保留 12 条，约 50 条内容会被覆盖。</div><div class="code-pair"><div><div class="lbl">原代码</div><pre class="code-block before">每份世界书：entries[&#x27;0&#x27;], uid: 0</pre></div><div><div class="lbl">修复后</div><pre class="code-block after">整合构建时按固定源顺序重新编号 entries key、uid 和 displayIndex，并断言总数为 62。</pre></div></div><div class="fix-hint">💡 整合文件必须由确定性构建或校验流程产生，不能手工拼接 JSON 对象。</div></div></div></div>
+
+<!-- §4 问题汇总表 -->
+<h2 class="section-title"><span class="num">§4</span>问题汇总表</h2>
+<div class="table-controls">
+  <select id="filterSeverity" onchange="filterTable()">
+    <option value="">全部严重等级</option>
+    <option value="Critical">Critical</option>
+    <option value="Major">Major</option>
+    <option value="Minor">Minor</option>
+    <option value="Question">Question/Praise</option>
+  </select>
+  <select id="filterDimension" onchange="filterTable()">
+    <option value="">全部维度</option>
+    <option value="维度1·空安全与边界防护">维度1·空安全与边界防护</option>
+<option value="维度2·线程安全与同步机制">维度2·线程安全与同步机制</option>
+<option value="维度3·资源与内存管理">维度3·资源与内存管理</option>
+<option value="维度4·代码逻辑与语法规范">维度4·代码逻辑与语法规范</option>
+<option value="维度5·性能与体验优化">维度5·性能与体验优化</option>
+<option value="维度6·兼容性、安全与工程规范">维度6·兼容性、安全与工程规范</option>
+<option value="维度7·代码风格与命名规范">维度7·代码风格与命名规范</option>
+<option value="维度8·IPC 通信安全">维度8·IPC 通信安全</option>
+<option value="维度9·序列化与数据格式">维度9·序列化与数据格式</option>
+  </select>
+  <input type="text" id="searchInput" placeholder="搜索文件/规则..." oninput="filterTable()" />
+</div>
+<div class="table-container">
+  <table id="issueTable"><thead><tr>
+    <th onclick="sortTable(0)">严重等级</th>
+    <th onclick="sortTable(1)">规则</th>
+    <th onclick="sortTable(2)">维度</th>
+    <th onclick="sortTable(3)">检查项</th>
+    <th onclick="sortTable(4)">位置</th>
+    <th onclick="sortTable(5)">代码片段</th>
+    <th>修复建议</th>
+  </tr></thead><tbody>
+<tr class="issue-row" data-severity="Major" data-dimension="维度六·兼容性、安全与工程规范"><td><span class="severity-badge sev-major">Major</span></td><td><code>6.3</code></td><td>维度六·兼容性、安全与工程规范</td><td>尚未提供用户要求的单一整合世界书</td><td><code>role/rosamund-hale/README.md:5-47</code></td><td><code class="snippet">分别导入城市、组织、配角、规则、核心案件和阶段世界书。</code></td><td>生成一份包含 62 条外部条目的规范整合世界书，并明确卡内嵌入 Lore 在完整安装时是否跳过。</td></tr>
+<tr class="issue-row" data-severity="Major" data-dimension="维度九·序列化与数据格式"><td><span class="severity-badge sev-major">Major</span></td><td><code>9.1</code></td><td>维度九·序列化与数据格式</td><td>直接合并会发生 entries 键与 uid 冲突</td><td><code>role/rosamund-hale/rosamund-city-lorebook.json:2-4</code></td><td><code class="snippet">每份世界书：entries[&#x27;0&#x27;], uid: 0</code></td><td>整合文件必须由确定性构建或校验流程产生，不能手工拼接 JSON 对象。</td></tr>
+<tr class="issue-row" data-severity="Major" data-dimension="维度六·兼容性、安全与工程规范"><td><span class="severity-badge sev-major">Major</span></td><td><code>6.3</code></td><td>维度六·兼容性、安全与工程规范</td><td>Quick Reply 硬编码旧核心案件世界书名称</td><td><code>role/rosamund-hale/rosamund-quick-replies.json:205-206</code></td><td><code class="snippet">/findentry file=rosamund-core-cases-lorebook field=comment ...</code></td><td>确定整合书唯一名称后，同时更新 Quick Reply、角色卡、规则、README 和 OOC 文档，并在初始化时做已知条目预检。</td></tr>
+<tr class="issue-row" data-severity="Major" data-dimension="维度三·资源与内存管理"><td><span class="severity-badge sev-major">Major</span></td><td><code>3.15</code></td><td>维度三·资源与内存管理</td><td>结案历史注入无上限增长</td><td><code>role/rosamund-hale/rosamund-quick-replies.json:225</code></td><td><code class="snippet">/addvar key=rh_case_history ... | /inject id=rh_case_continuity ... {{getvar::rh…</code></td><td>为长期沙盒设置明确容量和淘汰策略，并用 /tokens 或 /len 实际校验摘要尺寸。</td></tr>
+<tr class="issue-row" data-severity="Major" data-dimension="维度四·代码逻辑与语法规范"><td><span class="severity-badge sev-major">Major</span></td><td><code>4.17</code></td><td>维度四·代码逻辑与语法规范</td><td>长案件缺少持久化的活动案件状态账本</td><td><code>role/rosamund-hale/rosamund-quick-replies.json:149,225</code></td><td><code class="snippet">案件板只保存到 rh_case_board 并作为普通助手消息发送。</code></td><td>把活动状态作为有界、可重建的唯一账本，并显式传给案件板和结算生成。</td></tr>
+<tr class="issue-row" data-severity="Major" data-dimension="维度四·代码逻辑与语法规范"><td><span class="severity-badge sev-major">Major</span></td><td><code>4.24</code></td><td>维度四·代码逻辑与语法规范</td><td>关键状态更新不是事务式或可恢复的</td><td><code>role/rosamund-hale/rosamund-quick-replies.json:187,206,225,339,358</code></td><td><code class="snippet">先写 rh_case_file 或 closed，再更新其余变量和 injection。</code></td><td>让关键流程幂等并可恢复，避免出现变量是新档案但模型仍收到旧注入的 split-brain 状态。</td></tr>
+<tr class="issue-row" data-severity="Major" data-dimension="维度六·兼容性、安全与工程规范"><td><span class="severity-badge sev-major">Major</span></td><td><code>6.2</code></td><td>维度六·兼容性、安全与工程规范</td><td>缺少旧聊天迁移、导出和注入重建流程</td><td><code>role/rosamund-hale/README.md:204-210</code></td><td><code class="snippet">开始新聊天时需要重新初始化，并补入需要继承的名字、阶段和五轴状态。</code></td><td>版本升级和长会话换档前必须能检测孤儿变量、旧格式数组和缺失注入。</td></tr>
+<tr class="issue-row" data-severity="Major" data-dimension="维度四·代码逻辑与语法规范"><td><span class="severity-badge sev-major">Major</span></td><td><code>4.13</code></td><td>维度四·代码逻辑与语法规范</td><td>核心案件使用模糊查找但未核对返回身份</td><td><code>role/rosamund-hale/rosamund-quick-replies.json:206</code></td><td><code class="snippet">/findentry ... | /getentryfield ... field=content</code></td><td>避免错误档案被静默标记为另一个案件，是整合书版本预检的一部分。</td></tr>
+<tr class="issue-row" data-severity="Major" data-dimension="维度四·代码逻辑与语法规范"><td><span class="severity-badge sev-major">Major</span></td><td><code>4.17</code></td><td>维度四·代码逻辑与语法规范</td><td>动态标题与核心案件共用完成状态命名空间</td><td><code>role/rosamund-hale/rosamund-quick-replies.json:206,225</code></td><td><code class="snippet">/addvar key=rh_completed_cases {{getvar::rh_case_name}}</code></td><td>控制键和显示文本必须分离，核心完成状态应使用精确键查询。</td></tr>
+<tr class="issue-row" data-severity="Major" data-dimension="维度六·兼容性、安全与工程规范"><td><span class="severity-badge sev-major">Major</span></td><td><code>6.3</code></td><td>维度六·兼容性、安全与工程规范</td><td>尚未完成真实 SillyTavern 导入和按钮烟测</td><td><code>role/rosamund-hale/README.md:204-221</code></td><td><code class="snippet">尚未在本工作区内运行真实 SillyTavern UI。</code></td><td>这是发布前必须完成的运行时验收；静态检查不能证明 STscript 在真实 UI 中按预期执行。</td></tr>
+<tr class="issue-row" data-severity="Minor" data-dimension="维度四·代码逻辑与语法规范"><td><span class="severity-badge sev-minor">Minor</span></td><td><code>4.24</code></td><td>维度四·代码逻辑与语法规范</td><td>剧情阶段存在两个独立权威来源</td><td><code>role/rosamund-hale/rosamund-quick-replies.json:299-301</code></td><td><code class="snippet">设置剧情阶段只写 rh_story_stage，并提示手工切换世界书。</code></td><td>同一个状态应只有一个权威来源，或拥有自动一致性校验。</td></tr>
+<tr class="issue-row" data-severity="Minor" data-dimension="维度七·代码风格与命名规范"><td><span class="severity-badge sev-minor">Minor</span></td><td><code>7.9</code></td><td>维度七·代码风格与命名规范</td><td>案件目录和阶段映射多处重复且无生成校验</td><td><code>role/rosamund-hale/rosamund-quick-replies.json:205-206</code></td><td><code class="snippet">六处分别维护 GH 编号、标题和阶段映射。</code></td><td>整合世界书时同时建立可复现构建与校验，避免两个发布文件组合不兼容。</td></tr>
+<tr class="issue-row" data-severity="Minor" data-dimension="维度五·性能与体验优化"><td><span class="severity-badge sev-minor">Minor</span></td><td><code>5.1</code></td><td>维度五·性能与体验优化</td><td>19 个 Quick Reply 全部常驻显示</td><td><code>role/rosamund-hale/rosamund-quick-replies.json:9-370</code></td><td><code class="snippet">19 个条目全部 isHidden=false。</code></td><td>属于可选体验优化，不影响当前静态正确性。</td></tr>
+  </tbody></table>
+</div>
+
+<!-- §5 改进路线图 -->
+<h2 class="section-title"><span class="num">§5</span>改进路线图</h2>
+<div class="roadmap">
+  <div class="roadmap-card">
+    <h3><span class="severity-badge sev-critical">Critical</span> 必修 (合入前)</h3>
+    <ul><li style="color:var(--text-secondary)">无</li></ul>
+    <div class="eta">预估工时：0.0 h</div>
+  </div>
+  <div class="roadmap-card">
+    <h3><span class="severity-badge sev-major">Major</span> 强烈建议</h3>
+    <ul><li><code>role/rosamund-hale/README.md:5-47</code> — 尚未提供用户要求的单一整合世界书 (规则 <code>6.3</code>)</li>
+<li><code>role/rosamund-hale/rosamund-city-lorebook.json:2-4</code> — 直接合并会发生 entries 键与 uid 冲突 (规则 <code>9.1</code>)</li>
+<li><code>role/rosamund-hale/rosamund-quick-replies.json:205-206</code> — Quick Reply 硬编码旧核心案件世界书名称 (规则 <code>6.3</code>)</li>
+<li><code>role/rosamund-hale/rosamund-quick-replies.json:225</code> — 结案历史注入无上限增长 (规则 <code>3.15</code>)</li>
+<li><code>role/rosamund-hale/rosamund-quick-replies.json:149,225</code> — 长案件缺少持久化的活动案件状态账本 (规则 <code>4.17</code>)</li>
+<li><code>role/rosamund-hale/rosamund-quick-replies.json:187,206,225,339,358</code> — 关键状态更新不是事务式或可恢复的 (规则 <code>4.24</code>)</li>
+<li><code>role/rosamund-hale/README.md:204-210</code> — 缺少旧聊天迁移、导出和注入重建流程 (规则 <code>6.2</code>)</li>
+<li><code>role/rosamund-hale/rosamund-quick-replies.json:206</code> — 核心案件使用模糊查找但未核对返回身份 (规则 <code>4.13</code>)</li>
+<li><code>role/rosamund-hale/rosamund-quick-replies.json:206,225</code> — 动态标题与核心案件共用完成状态命名空间 (规则 <code>4.17</code>)</li>
+<li><code>role/rosamund-hale/README.md:204-221</code> — 尚未完成真实 SillyTavern 导入和按钮烟测 (规则 <code>6.3</code>)</li></ul>
+    <div class="eta">预估工时：5.0 h</div>
+  </div>
+  <div class="roadmap-card">
+    <h3><span class="severity-badge sev-minor">Minor</span> 可协商</h3>
+    <ul><li><code>role/rosamund-hale/rosamund-quick-replies.json:299-301</code> — 剧情阶段存在两个独立权威来源 (规则 <code>4.24</code>)</li>
+<li><code>role/rosamund-hale/rosamund-quick-replies.json:205-206</code> — 案件目录和阶段映射多处重复且无生成校验 (规则 <code>7.9</code>)</li>
+<li><code>role/rosamund-hale/rosamund-quick-replies.json:9-370</code> — 19 个 Quick Reply 全部常驻显示 (规则 <code>5.1</code>)</li></ul>
+    <div class="eta">预估工时：0.8 h</div>
+  </div>
+</div>
+
+</div>
+
+<div class="footer">
+  <p class="conf">CONFIDENTIAL</p>
+  <p>Thundersoft &middot; Code Review Skill &middot; 本报告由 code-review skill 自动生成</p>
+  <p>生成时间：2026-08-24 16:31</p>
+</div>
+
+<script>
+(function(){
+  var g = document.getElementById('watermarkGrid');
+  for (var y = 0; y < (window.innerHeight || 2000) + 400; y += 180) {
+    for (var x = -200; x < (window.innerWidth || 2000) + 200; x += 320) {
+      var s = document.createElement('span');
+      s.textContent = 'Confidential';
+      s.style.left = x + 'px';
+      s.style.top = y + 'px';
+      g.appendChild(s);
+    }
+  }
+})();
+
+function toggleCard(h) {
+  var b = h.nextElementSibling;
+  var v = b.style.display !== 'none';
+  b.style.display = v ? 'none' : 'block';
+  h.classList.toggle('expanded', !v);
+}
+
+function filterTable() {
+  var sev = document.getElementById('filterSeverity').value.toLowerCase();
+  var dim = document.getElementById('filterDimension').value;
+  var q   = document.getElementById('searchInput').value.toLowerCase();
+  var rows = document.querySelectorAll('#issueTable tbody tr.issue-row');
+  rows.forEach(function (r) {
+    var s = (r.getAttribute('data-severity') || '').toLowerCase();
+    var d = r.getAttribute('data-dimension') || '';
+    var text = r.innerText.toLowerCase();
+    var ok = (!sev || s === sev) && (!dim || d === dim) && (!q || text.indexOf(q) !== -1);
+    r.style.display = ok ? '' : 'none';
+  });
+}
+
+function sortTable(col) {
+  var tbody = document.querySelector('#issueTable tbody');
+  var rows = Array.from(tbody.querySelectorAll('tr.issue-row'));
+  var asc = tbody.getAttribute('data-sort-col') == col ? tbody.getAttribute('data-sort-asc') !== '1' : true;
+  rows.sort(function (a, b) {
+    var av = a.children[col].innerText.trim();
+    var bv = b.children[col].innerText.trim();
+    return asc ? av.localeCompare(bv, 'zh') : bv.localeCompare(av, 'zh');
+  });
+  rows.forEach(function (r) { tbody.appendChild(r); });
+  tbody.setAttribute('data-sort-col', col);
+  tbody.setAttribute('data-sort-asc', asc ? '1' : '0');
+}
+
+window.addEventListener('load', function () {
+  if (typeof Chart === 'undefined') {
+    console.warn('Chart.js failed to load. Charts will not render.');
+    return;
+  }
+  Chart.defaults.color = '#5A5A5A';
+  Chart.defaults.borderColor = '#E8E8E8';
+  var wine = ['#8B1A2B','#A0303F','#C76070','#F2D5DA','#6B0F1A','#2980b9','#27ae60','#e67e22','#c0392b'];
+
+  var dimNames  = ["维度1·空安全与边界防护", "维度2·线程安全与同步机制", "维度3·资源与内存管理", "维度4·代码逻辑与语法规范", "维度5·性能与体验优化", "维度6·兼容性、安全与工程规范", "维度7·代码风格与命名规范", "维度8·IPC 通信安全", "维度9·序列化与数据格式"];
+  var dimScores = [10.0, 0, 9.0, 5.7, 9.7, 6.0, 9.7, 0, 9.0];
+  var dimIssueCounts = [0, 0, 1, 5, 1, 4, 1, 0, 1];
+  var dimWeights = [20, 14, 20, 14, 8, 8, 8, 6, 6];
+
+  new Chart(document.getElementById('radarChart'), {
+    type: 'radar',
+    data: { labels: dimNames, datasets: [{
+      label: '维度得分', data: dimScores,
+      backgroundColor: 'rgba(139,26,43,0.15)', borderColor: '#8B1A2B', borderWidth: 2,
+      pointBackgroundColor: '#8B1A2B', pointBorderColor: '#fff', pointBorderWidth: 2, pointRadius: 5
+    }]},
+    options: { responsive: true, scales: { r: { beginAtZero: true, max: 10, ticks: { stepSize: 2 } } }, plugins: { legend: { display: false } } }
+  });
+
+  new Chart(document.getElementById('barChart'), {
+    type: 'bar',
+    data: { labels: dimNames, datasets: [
+      { label: '得分(满分10)', data: dimScores, backgroundColor: 'rgba(139,26,43,0.7)', borderRadius: 6, yAxisID: 'y' },
+      { label: '问题数',       data: dimIssueCounts, backgroundColor: 'rgba(199,96,112,0.5)', borderRadius: 6, yAxisID: 'y1' }
+    ]},
+    options: {
+      responsive: true,
+      scales: {
+        y: { beginAtZero: true, max: 10, position: 'left', title: { display: true, text: '得分' } },
+        y1: { beginAtZero: true, position: 'right', grid: { drawOnChartArea: false }, title: { display: true, text: '问题数' } }
+      },
+      plugins: { legend: { position: 'bottom' } }
+    }
+  });
+
+  new Chart(document.getElementById('pieChart'), {
+    type: 'doughnut',
+    data: { labels: ['Critical', 'Major', 'Minor', 'Q/Praise'], datasets: [{
+      data: [0, 10, 3, 0],
+      backgroundColor: ['#c0392b', '#e67e22', '#27ae60', '#2980b9'], borderWidth: 0
+    }]},
+    options: { responsive: true, plugins: { legend: { position: 'bottom' } } }
+  });
+
+  new Chart(document.getElementById('weightChart'), {
+    type: 'polarArea',
+    data: { labels: dimNames, datasets: [{
+      data: dimWeights,
+      backgroundColor: wine.map(function (c) { return c + '99'; }),
+      borderColor: wine, borderWidth: 2
+    }]},
+    options: { responsive: true, plugins: { legend: { position: 'bottom', labels: { font: { size: 11 } } } }, scales: { r: { beginAtZero: true, ticks: { display: false } } } }
+  });
+});
+</script>
+
+</body>
+</html>
