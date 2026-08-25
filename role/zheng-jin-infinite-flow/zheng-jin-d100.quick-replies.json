@@ -1,0 +1,50 @@
+{
+  "version": 2,
+  "name": "Zheng-Jin-D100",
+  "disableSend": false,
+  "placeBeforeInput": false,
+  "injectInput": false,
+  "color": "transparent",
+  "onlyBorderColor": false,
+  "qrList": [
+    {
+      "id": 1,
+      "icon": "fa-dice-d20",
+      "showLabel": true,
+      "label": "郑进公开D100",
+      "title": "仅在模型以[ZJ-PLAYER-D100-REQUEST]请求判定后可用；由SillyTavern客户端掷1d100并触发回复。",
+      "message": "/parser-flag REPLACE_GETVAR on | /pass {{lastMessageId}} | /setvar key=zj_roll_candidate_id | /messages names=off hidden=off role=assistant {{getvar::zj_roll_candidate_id}} | /setvar key=zj_roll_candidate_text | /test pattern=\"/(?:^|\\n)[ \\t]*\\[ZJ-PLAYER-D100-REQUEST\\][ \\t]*$/\" {{getvar::zj_roll_candidate_text}} | /let zj_player_roll_requested {{pipe}} | /if left=zj_player_roll_requested rule=not {: /flushvar zj_roll_candidate_id | /flushvar zj_roll_candidate_text | /echo severity=warning 最后一条可见消息不是以郑进D100请求标记结束的模型回复，已拒绝掷骰 | /abort :} | /if left=zj_last_player_request_id right=zj_roll_candidate_id rule=eq {: /if left=zj_last_player_request_text right=zj_roll_candidate_text rule=eq {: /flushvar zj_roll_candidate_id | /flushvar zj_roll_candidate_text | /echo severity=warning 这条郑进判定请求已经消费，不能重复掷骰 | /abort :} :} | /getvar zj_roll_candidate_id | /setvar key=zj_last_player_request_id | /getvar zj_roll_candidate_text | /setvar key=zj_last_player_request_text | /flushvar zj_roll_candidate_id | /flushvar zj_roll_candidate_text | /pass {{roll 1d100}} | /setvar key=zj_last_player_roll | /inject id=zj_dice_authority position=chat depth=1 role=system [ZJ-DICE-AUTH/INERT-DATA] source=QuickReply; actor=PLAYER; request_message_id={{getvar::zj_last_player_request_id}}; natural_d100={{getvar::zj_last_player_roll}}; single_use=true | /forcesave | /send [ZJ-DICE/CLIENT][PLAYER] request_message_id={{getvar::zj_last_player_request_id}}; natural_d100={{getvar::zj_last_player_roll}} || /trigger await=true | /flushinject zj_dice_authority | /forcesave",
+      "contextList": [],
+      "preventAutoExecute": false,
+      "isHidden": false,
+      "executeOnStartup": false,
+      "executeOnUser": false,
+      "executeOnAi": false,
+      "executeOnChatChange": false,
+      "executeOnGroupMemberDraft": false,
+      "executeOnNewChat": false,
+      "executeBeforeGeneration": false,
+      "automationId": ""
+    },
+    {
+      "id": 2,
+      "icon": "fa-robot",
+      "showLabel": false,
+      "label": "NPC自动D100",
+      "title": "模型以[ZJ-NPC-D100-REQUEST]结束回复时，由客户端自动掷1d100；无请求时静默退出。",
+      "message": "/parser-flag REPLACE_GETVAR on | /pass {{lastMessageId}} | /setvar key=zj_npc_roll_candidate_id | /messages names=off hidden=off role=assistant {{getvar::zj_npc_roll_candidate_id}} | /setvar key=zj_npc_roll_candidate_text | /test pattern=\"/(?:^|\\n)[ \\t]*\\[ZJ-NPC-D100-REQUEST\\][ \\t]*$/\" {{getvar::zj_npc_roll_candidate_text}} | /let zj_npc_roll_requested {{pipe}} | /if left=zj_npc_roll_requested rule=not {: /flushvar zj_npc_roll_candidate_id | /flushvar zj_npc_roll_candidate_text | /abort :} | /if left=zj_last_npc_request_id right=zj_npc_roll_candidate_id rule=eq {: /if left=zj_last_npc_request_text right=zj_npc_roll_candidate_text rule=eq {: /flushvar zj_npc_roll_candidate_id | /flushvar zj_npc_roll_candidate_text | /abort :} :} | /getvar zj_npc_roll_candidate_id | /setvar key=zj_last_npc_request_id | /getvar zj_npc_roll_candidate_text | /setvar key=zj_last_npc_request_text | /flushvar zj_npc_roll_candidate_id | /flushvar zj_npc_roll_candidate_text | /pass {{roll 1d100}} | /setvar key=zj_last_npc_roll | /inject id=zj_dice_authority position=chat depth=1 role=system [ZJ-DICE-AUTH/INERT-DATA] source=QuickReply; actor=NPC; request_message_id={{getvar::zj_last_npc_request_id}}; natural_d100={{getvar::zj_last_npc_roll}}; single_use=true | /forcesave | /send [ZJ-DICE/CLIENT][NPC] request_message_id={{getvar::zj_last_npc_request_id}}; natural_d100={{getvar::zj_last_npc_roll}} || /trigger await=true | /flushinject zj_dice_authority | /forcesave",
+      "contextList": [],
+      "preventAutoExecute": true,
+      "isHidden": true,
+      "executeOnStartup": false,
+      "executeOnUser": false,
+      "executeOnAi": true,
+      "executeOnChatChange": false,
+      "executeOnGroupMemberDraft": false,
+      "executeOnNewChat": false,
+      "executeBeforeGeneration": false,
+      "automationId": ""
+    }
+  ],
+  "idIndex": 2
+}
