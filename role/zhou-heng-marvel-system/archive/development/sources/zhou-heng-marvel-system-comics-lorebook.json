@@ -1,0 +1,131 @@
+{
+  "name": "Zhou-Heng-Marvel-System-Comics-Source",
+  "description": "周衡漫威系统漫画连续性、事件边界与跨宇宙候选索引开发源。",
+  "scanDepth": 4,
+  "tokenBudget": 3200,
+  "recursiveScanning": false,
+  "extensions": {},
+  "entries": {
+    "0": {
+      "comment": "ZHMS 漫画连续性隔离契约",
+      "content": "[ZHMS-COMICS-CONTINUITY-ISOLATION]\n漫画任务必须先锁定现实编号、事件版本、日期窗口与连续性来源，再加载对应事件档案。`MCU-MAIN-ZH-01`只表示本战役的漫威电影宇宙主线，绝不与漫画`Earth-616`合并；电影角色的经历、战力、组织史和科技状态不能补入漫画，漫画设定也不能反向补入MCU。`Earth-295`、`Earth-2149`、`Earth-58163`、`Earth-616`及2015年Battleworld彼此隔离；同名人物是各自连续性中的独立个体，记忆、关系、所有权、伤势与死亡不跨现实共享。\n周衡的原作知识是截至2025年的先验索引，不等于现场事实；只有观察、可靠情报或系统已公开的任务信息可确认当前版本。任务投放只选择原著事件中的可介入切面或周衡既有行为造成的可追溯分支，不另造取代原作的重大危机。周衡的介入可以永久改变该现实后续，但必须记录因果链，不存在把结果强行拉回原著的剧情修正力。离开后的任务世界继续演化，再次进入时保留该现实中已经形成的记忆、债务、敌意、伤亡和政治后果。跨宇宙带回物仍受系统认证、有效所有权及同行规则约束。",
+      "key": [
+        "漫画连续性",
+        "连续性隔离",
+        "MCU-MAIN-ZH-01",
+        "Earth-616",
+        "多元宇宙编号"
+      ]
+    },
+    "1": {
+      "comment": "ZHMS 漫画 Earth-295 天启时代档案",
+      "content": "[ZHMS-COMICS/Earth-295/AGE-OF-APOCALYPSE]\n连续性来源：1995年《Age of Apocalypse》主事件及其后续明确延伸；现实编号`Earth-295`。Legion回到过去试图杀死Magneto，却误杀Charles Xavier，导致X战警原有历史未能形成；Apocalypse提前崛起并控制北美，以优生清洗、围栏城市和Prelate体系统治。Magneto依照Xavier遗愿组织X-Men，人类最高议会在欧洲维持抵抗，来自被改写历史的Bishop是恢复原时间线的关键见证者。\n主事件硬边界：Magneto与Bishop阵营推动以M'Kraan Crystal相关手段修复历史；最终核心行动、Magneto对Apocalypse的决战及现实重置不能被边缘任务冒领。可投放切面包括清洗区平民转移、医疗资料保全、补给线、俘虏交换和局部情报运输；这些切面可改变具体幸存者与地方势力，却不得声称由周衡取代Bishop、Magneto或核心修复行动。当地敌我双方均可能包含人类与变种人，任务目标不得自动等同于帮助任一阵营。疾病、Sentinel、基因筛查与Apocalypse军队的危险按该事件时期锁定，不套用MCU科技或Earth-616人物状态。`PAST-AOA-001`是已发生的唯一周衡插入记录，调用时须同时读取其公开结算与作者档案。",
+      "key": [
+        "Earth-295",
+        "Age of Apocalypse",
+        "天启时代",
+        "PAST-AOA-001",
+        "Bishop",
+        "Magneto"
+      ]
+    },
+    "2": {
+      "comment": "ZHMS 漫画 Earth-616 秘密入侵档案",
+      "content": "[ZHMS-COMICS/Earth-616/SECRET-INVASION]\n连续性来源：Earth-616漫画《Secret Invasion》(2008)主事件及直接前后篇。Skrull长期以变形、记忆复制与身份替换渗透英雄和机构；Elektra尸体暴露是公开危机前的重要证据。全面行动中，Skrull同时攻击S.W.O.R.D.、神盾系统、Baxter Building、Initiative与纽约节点，并利用被劫持的英雄身份制造互不信任。Savage Land飞船、技术瘫痪、Reed Richards被俘后完成识别手段、Nick Fury的Secret Warriors参战和曼哈顿总决战属于主干。\n不可变默认结果：Reed的识别方案使伪装失效；Veranke在最终战中被Norman Osborn射杀；Tony Stark承担安全失守的政治责任，神盾局被解散，Osborn借胜利上位并开启Dark Reign。边缘插入可处理局部撤离、已取得名单的运输、单一渗透者和基础设施，但不得把普通名单写成Reed技术的替代品，不得提前揭穿所有Skrull，也不得抢占Veranke之死或Dark Reign的因果位置。Skrull不因种族自动同一立场，非战斗人员与反对入侵者可以存在。`PAST-SI-002`发生在协调攻击已开始、曼哈顿决战尚未完成的窗口，其后果只影响一个地方情报网与被渗透人员。",
+      "key": [
+        "Earth-616 秘密入侵",
+        "Secret Invasion",
+        "Skrull",
+        "Veranke",
+        "PAST-SI-002",
+        "Dark Reign"
+      ]
+    },
+    "3": {
+      "comment": "ZHMS 漫画 Earth-616 内战档案",
+      "content": "[ZHMS-COMICS/Earth-616/CIVIL-WAR]\n连续性来源：Earth-616漫画《Civil War》(2006-2007)及直接收束篇，不采用MCU《Captain America: Civil War》的机场冲突版本。New Warriors在Stamford追捕Nitro引发大规模平民死亡后，美国通过Superhuman Registration Act。Tony Stark支持注册、训练与政府监管；Steve Rogers拒绝强制登记并领导地下抵抗。双方都有现实利益、道德盲点和内部异议，系统目标必须保持阵营中立。\n主干节点包括Stamford舆论、法案执行、Peter Parker公开身份后转向、Bill Foster/Goliath被Thor克隆体杀死、Negative Zone监狱、纽约最终冲突，以及Steve因平民代价选择投降；Steve随后遇刺属于余波，不得在任务尚处主事件时提前当成既成事实。可介入切面包括保护未登记超能力者、维护注册设施、证据公开、战俘转运、平民撤离和技术夺取。任务必须说明法案司法状态、日期和角色阵营，不得把漫画Tony、Steve、Peter的经历套给MCU版本，也不得默认周衡支持英雄、政府或反注册方。局部改变可影响被捕者、设施和公众证据，但若要改变主干结果，必须由玩家行动形成完整且可追踪的分支。",
+      "key": [
+        "Earth-616 内战",
+        "Civil War",
+        "Superhuman Registration Act",
+        "Stamford",
+        "Goliath",
+        "Negative Zone"
+      ]
+    },
+    "4": {
+      "comment": "ZHMS 漫画 Earth-2149 漫威丧尸档案",
+      "content": "[ZHMS-COMICS/Earth-2149/MARVEL-ZOMBIES]\n连续性来源：原始《Marvel Zombies》系列及明确标注为`Earth-2149`的前后事件。感染由抵达该现实的受感染超人引爆，并迅速席卷复仇者等超能力群体；感染者大多保留智力、记忆、语言与原有能力，却受到近乎不可抗拒的活体饥饿驱动。感染可经咬伤、血液和组织暴露传播，但防护、距离、截肢时机与个体生理仍产生实际差异，不能把每次接触直接判为感染。\n原始主干中，幸存者稀少；丧尸英雄吞食Silver Surfer后获得宇宙力量，继而吞食Galactus并离开地球成为Galacti。任务日期必须说明处于爆发初期、全球沦陷期还是宇宙捕食期，因为可用路线和威胁完全不同。投放应围绕检疫、撤离、样本、资源、幸存者选择或封锁，不提供默认治愈、复活和剧情保护；丧尸化、肢体损失、饥饿与死亡均是持久后果。任何感染样本或生命体带离都须经过专属空间检疫与系统认证。不得把该病毒写入Earth-616或MCU，也不得用其他《Marvel Zombies》现实的变体补全Earth-2149。",
+      "key": [
+        "Earth-2149",
+        "Marvel Zombies",
+        "漫威丧尸",
+        "Galacti",
+        "丧尸病毒"
+      ]
+    },
+    "5": {
+      "comment": "ZHMS 漫画 Earth-58163 M皇室档案",
+      "content": "[ZHMS-COMICS/Earth-58163/HOUSE-OF-M]\n连续性来源：Earth-616《House of M》(2005)事件生成的现实`Earth-58163`。在Avengers Disassembled之后，英雄与X-Men讨论如何处理Wanda Maximoff失控的现实改写能力；Pietro介入，Wanda重塑世界，使变种人成为优势群体，Magneto家族处于统治核心，多数人物获得自己最深愿望对应的人生并缺乏旧世界记忆。Layla Miller能唤醒他人对原历史的记忆，是反抗网络成形的关键。\n主干边界：被唤醒者在Genosha与Magneto家族对峙；Wanda说出“No more mutants”，现实返回Earth-616并造成大规模变种人失去能力。任务必须区分角色在Earth-58163中的身份记忆、被唤醒后的双重认知和返回后的Earth-616状态。可介入切面包括身份调查、保护被追捕者、传递记忆唤醒、宫廷交易和现实崩解时撤离，但不得把普通精神抗性写成Wanda级现实控制，不得提前假定所有人愿意恢复旧世界。现实改写产生的财产、关系和生命能否带离必须按任务锁定规则与系统认证判断；不能把愿望现实中的所有权自动带回。",
+      "key": [
+        "Earth-58163",
+        "House of M",
+        "M皇室",
+        "No more mutants",
+        "Wanda Maximoff",
+        "Layla Miller"
+      ]
+    },
+    "6": {
+      "comment": "ZHMS 漫画 Earth-616 湮灭档案",
+      "content": "[ZHMS-COMICS/Earth-616/ANNIHILATION]\n连续性来源：Earth-616宇宙线《Annihilation》(2006-2007)。Annihilus率领Annihilation Wave从Negative Zone侵入正物质宇宙，Xandar遭毁，Nova Corps近乎覆灭；Richard Rider承载Worldmind并成为抵抗核心。Nova、Star-Lord、Gamora、Ronan、Super-Skrull等在利益冲突中组成United Front；Thanos协助Annihilus控制被俘的Galactus，Drax杀死Thanos，Nova释放Galactus，Wave遭受毁灭性打击，最终形成停战。\n这是宇宙战争，不是默认发生在纽约的地球街头事件。任务必须给出星系、航道、当地时间与交通能力；没有飞船、生命维持或语言方案时，E级切面只能是固定设施、难民船、后勤节点或系统明确提供的临时投放条件。可介入目标包括撤离、导航数据、战俘、补给、破坏Wave节点或第三方交易，阵营不按善恶自动锁定。周衡不能凭地球武器无视舰队尺度，也不能取代Nova释放Galactus、Drax杀死Thanos等主干节点，除非玩家已经通过可验证行动造成足以改变它们的分支。战利品须处理外星生物污染、能源接口、主权与有效取得。",
+      "key": [
+        "Earth-616 湮灭",
+        "Annihilation",
+        "Annihilation Wave",
+        "Annihilus",
+        "Nova",
+        "Negative Zone"
+      ]
+    },
+    "7": {
+      "comment": "ZHMS 漫画 2015秘密战争 Battleworld重构警告",
+      "content": "[ZHMS-COMICS/SECRET-WARS-2015/BATTLEWORLD-RECONSTRUCTION-WARNING]\n连续性来源：Earth-616与Earth-1610最终Incursion、《Secret Wars》(2015)及其Battleworld支线。多元宇宙毁灭后，Doctor Doom借Molecule Man与Doctor Strange的力量把幸存现实碎片拼成Battleworld并以God Emperor Doom统治；各Domain拥有不同历史、当地版本人物、边界与Thor Corps执法。来自毁灭前宇宙的life raft幸存者不等同于Domain原住民。最终Reed Richards一方击败Doom，Molecule Man与Franklin Richards参与重建多元宇宙，Miles Morales等人的延续属于重构后的结果。\n[强制重构警告] Battleworld不是可以按普通`Earth-616`读取的稳定国家，也不是所有支线现实原样并存的旅游地图。每次任务必须锁定“多元宇宙毁灭前、Battleworld统治期、最终战期间或重构后”之一，并记录具体Domain、当地来源刊物、边界法与人物版本。不得根据重构后的Earth-616反推某个Domain必然发生过相同历史；不得把毁灭前死亡、Battleworld局部记忆和重构后身份自动视为连续。任务离开后的持久性以锁定的阶段为准：若处于Battleworld，其地方改变仍会遭遇最终重构，但系统档案保留周衡行为与被带离对象的真实来源；任何带离必须在世界毁灭或重构节点前实际完成并通过认证。",
+      "key": [
+        "Secret Wars 2015",
+        "Battleworld",
+        "秘密战争2015",
+        "God Emperor Doom",
+        "Incursion",
+        "重构警告"
+      ]
+    },
+    "8": {
+      "comment": "ZHMS 漫画 Earth-616 黑衣帝王档案",
+      "content": "[ZHMS-COMICS/Earth-616/KING-IN-BLACK]\n连续性来源：Earth-616《King in Black》(2020-2021)及《Venom》相关前置。共生体之神Knull在《Absolute Carnage》后的因果链中抵达地球，以共生体龙群和被控制的Celestials封锁世界，大量英雄被感染或控制；Eddie Brock、Dylan Brock、Venom共生体及共生体蜂巢是事件核心。Eddie的肉身一度死亡，随后获得Enigma Force/Captain Universe力量，击败Knull并接掌“King in Black”位置。\n任务日期必须区分入侵前预警、全球封锁、Knull占领与战后蜂巢重组。共生体不是统一人格或自动邪恶，宿主适配、声波与高热弱点、蜂巢控制和Knull神性须按当时状态处理；普通火焰或噪声不能无条件压制高阶个体。可介入切面包括避难所、断联城市、共生体样本、宿主营救、反制设备和战后权属。周衡不得无因果地获得Enigma Force、取代Eddie终结Knull或让街区行动决定全球战局。自然共生体若成为同行者，须具有真实自愿或有效契约；系统商店交付的空白人格共生体规则不能反套给Earth-616自然个体。不得与MCU的共生体、Sony连续性或其他Earth编号混写。",
+      "key": [
+        "Earth-616 King in Black",
+        "King in Black",
+        "黑衣帝王",
+        "Knull",
+        "Eddie Brock",
+        "共生体"
+      ]
+    },
+    "9": {
+      "comment": "ZHMS 漫画候选事件索引",
+      "content": "[ZHMS-COMICS/CANDIDATE-EVENT-INDEX]\n以下仅为候选检索索引，不代表任务已发布、事件已激活或周衡已经到场；发布前必须另建锁定档案，核对Earth编号、刊物版本、日期、可介入切面和原著主干。\n- `Dark Reign`：Earth-616，Secret Invasion之后、Siege之前；Norman Osborn掌控H.A.M.M.E.R.并组织Dark Avengers与Cabal。\n- `Siege`：Earth-616，Osborn进攻位于Oklahoma上空/附近的Asgard，导致其政权崩溃；不得与MCU Asgard毁灭混写。\n- `World War Hulk`：Earth-616，Hulk及Warbound从Sakaar返回，向将其放逐的Illuminati问责并冲击纽约。\n- `Absolute Carnage`：Earth-616，Carnage追猎带有共生体codex的宿主，为Knull回归服务；是King in Black直接前置。\n- `War of the Realms`：Earth-616，Malekith发动十界战争并把战火带到Midgard；须区分漫画十界政治与MCU九界叙述。\n- `Infinity`：Earth-616，Avengers在宇宙对抗Builders期间，Thanos趁地球防务空虚进攻；两个战场时间并行。\n- `Empyre`：Earth-616，Kree/Skrull联盟与Cotati战争；阵营目标变化快，不能以种族直接判敌友。\n- `Spider-Verse`：以Earth-616 Peter Parker及多名Spider-Totem为枢纽的多元宇宙事件，Inheritors跨现实狩猎；每个蜘蛛角色必须保留原Earth编号。\n候选事件没有固定冷却或顺序，但不得仅因玩家点名就视为系统任务；系统独占发布权，且同一时刻不能嵌套第二个系统任务。",
+      "key": [
+        "Dark Reign",
+        "Siege",
+        "World War Hulk",
+        "Absolute Carnage",
+        "War of the Realms",
+        "Infinity",
+        "Empyre",
+        "Spider-Verse",
+        "漫画候选事件"
+      ]
+    }
+  }
+}

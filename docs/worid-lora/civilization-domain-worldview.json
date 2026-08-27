@@ -1,0 +1,1002 @@
+{
+  "schema_version": "1.0",
+  "id": "civilization-domain",
+  "title": "文明大域世界观",
+  "language": "zh-CN",
+  "document_type": "worldbuilding_reference",
+  "scope": {
+    "content": "纯世界观设定",
+    "reference_year": 12643,
+    "included": [
+      "宇宙尺度",
+      "历史",
+      "空间地理",
+      "文明制度",
+      "魔法技术",
+      "主要政体",
+      "国际秩序"
+    ],
+    "excluded": [
+      "角色身份",
+      "人物卡设定",
+      "固定故事",
+      "委托",
+      "阴谋",
+      "剧情触发条件",
+      "随机判定规则",
+      "叙事视角",
+      "交互状态"
+    ]
+  },
+  "overview": {
+    "name": "文明大域",
+    "scale": "横跨多个大型河系群",
+    "polity_count": "数万至十万计",
+    "reference_era": "标准纪12643年前后",
+    "political_structure": "七大霸权分别主导不同区域，但不直接统治整个文明大域",
+    "current_order": "第三次殖民战争后尚未再次爆发霸权间全面战争，相对和平由文明议会维持",
+    "persistent_conflicts": [
+      "代理冲突",
+      "秘密条约",
+      "技术封锁",
+      "违禁技术流通",
+      "情报行动"
+    ],
+    "population": {
+      "main_origin": "主体人口与绝大多数母文明后裔源自同一个种族",
+      "variation_causes": [
+        "长期隔绝",
+        "环境适应",
+        "深度魔法改造"
+      ],
+      "other_intelligences": "存在少量原始外星智慧种族",
+      "known_advanced_alien_hegemony": false
+    }
+  },
+  "ancient_history": {
+    "publicly_known": [
+      "文明大域的共同起点是失落的黑暗年代星际大殖民",
+      "大殖民以前存在过一个已经毁灭的母文明",
+      "现存主要文明的主体人口具有共同的种族起源",
+      "黑暗年代殖民地重新建立联系后才形成统一标准历和跨域秩序"
+    ],
+    "setting_level_sequence": [
+      {
+        "order": 1,
+        "event": "极古母文明在一个拥有两颗主要宜居星球的双星行星系统中进入第一次太空黎明时代"
+      },
+      {
+        "order": 2,
+        "event": "人为技术灾难摧毁母文明，幸存者散落在双星系统内"
+      },
+      {
+        "order": 3,
+        "event": "两颗星球分别发展出两个同源新文明，并再次进入太空黎明时代"
+      },
+      {
+        "order": 4,
+        "event": "两个同源文明之间的战争令整个母星系失去宜居条件"
+      },
+      {
+        "order": 5,
+        "event": "幸存者向不同方向远航并建立彼此隔绝的殖民地"
+      }
+    ],
+    "fixed_facts": [
+      "第一次毁灭属于人为技术灾难",
+      "第二次毁灭发生于两个同源文明之间的战争"
+    ],
+    "deliberately_unresolved": [
+      "具体责任者",
+      "技术机制",
+      "战争起因",
+      "完整过程"
+    ],
+    "knowledge_constraints": [
+      "不存在完整母文明数据库",
+      "不存在掌握全部古史的存活见证者",
+      "不存在能够单独恢复完整历史的遗迹",
+      "神话、史诗、宗教解释与考古假说可以互相冲突",
+      "局部遗迹只能证明有限地区和有限事件"
+    ]
+  },
+  "calendar_and_lifespan": {
+    "epoch": "标准纪0年始于黑暗年代殖民地重新建立联系后签署的跨殖民地统一历法协议",
+    "neutrality": "标准历不纪念任何现存霸权",
+    "standard_day_hours": 24,
+    "days_per_month": 48,
+    "months_per_year": 16,
+    "days_per_year": 768,
+    "days_per_week": 8,
+    "weeks_per_month": 6,
+    "months_per_administrative_quarter": 4,
+    "usage": "各行星可保留本地季节历，外交、金融、航行、法律和历史档案统一采用标准历",
+    "lifespan": {
+      "social_adulthood_standard_years": "16至20",
+      "full_legal_capacity_standard_years": 24,
+      "ordinary_standard_years": "200至400",
+      "wealthy_or_highly_modified": "可能超过1000标准年",
+      "exceptional": "极少数特殊个体可跨越数千标准年"
+    }
+  },
+  "geography": {
+    "model": "环带是由航道密度、抵达时间、殖民历史和政治边界共同形成的不规则三维空间区域；多数环带近似封闭球壳，外环带是局部半球形历史区域",
+    "inner_domain": [
+      "中央环带",
+      "间环带",
+      "外环带",
+      "殖民环带"
+    ],
+    "regions": [
+      {
+        "name": "中央环带",
+        "development": "最高",
+        "description": "文明再起源地区和最早恢复跨殖民地联系的高密度核心网络，魔法工业、学院、人口和战略设施高度集中",
+        "dominant_powers": [
+          "康特雷纳企业联合",
+          "哈那洛加德帝国联邦"
+        ]
+      },
+      {
+        "name": "间环带",
+        "development": "航道密集，宜居世界较少",
+        "description": "中央环带与外部殖民地区之间的人为战略缓冲层，小国、自由港、航道城、国际管理区和半独立节点并存",
+        "dominant_powers": []
+      },
+      {
+        "name": "外环带",
+        "development": "高",
+        "description": "位于间环带外围部分方向的半球形历史区域，源于殖民环带内缘反抗新世界同盟的独立战争",
+        "dominant_powers": [
+          "航道共和国",
+          "南境统合主权"
+        ]
+      },
+      {
+        "name": "殖民环带",
+        "development": "高",
+        "description": "间环带与外环带以外的高开发度星域，也是内域中空间跨度最大的环带",
+        "dominant_powers": [
+          "新世界同盟"
+        ]
+      },
+      {
+        "name": "荒芜环带",
+        "development": "低于内域",
+        "description": "第二次殖民战争后继续向外建立的殖民区域，空间面积最大，内部仍有大量空白区域",
+        "dominant_powers": [
+          "先锋邦"
+        ]
+      },
+      {
+        "name": "外殖民域",
+        "development": "极低",
+        "description": "第三次殖民战争后才开始系统探索和建立的边疆区域，定居点零散并依靠少量航道串联",
+        "dominant_powers": [
+          "外殖民域拓殖者联盟"
+        ]
+      },
+      {
+        "name": "域外黑区",
+        "development": "未开发或失联",
+        "description": "外殖民域之外的连续未知空间，也包括荒芜环带和外殖民域内部未被航道与定位网覆盖的空洞",
+        "possible_contents": [
+          "失联殖民地",
+          "原始外星文明",
+          "异常天体",
+          "古代残骸"
+        ],
+        "known_advanced_alien_hegemony": false
+      }
+    ]
+  },
+  "navigation": {
+    "route_formation": "可利用的自然空间褶皱经大型法阵、信标、航道站和持续校准工程稳定后形成空间航道",
+    "off_route_faster_than_light": {
+      "possible": true,
+      "limitations": [
+        "航程短",
+        "误差大",
+        "成本高",
+        "可能落入无法重新定位的空域"
+      ]
+    },
+    "travel_times": {
+      "inner_domain_dense_route_crossing": "数月",
+      "barren_ring_or_outer_colonial_domain_crossing": "数年",
+      "entire_civilization_domain": "数十年"
+    },
+    "strategic_rapid_mobility": {
+      "holders": "七大霸权和少数地区强权",
+      "requirements": [
+        "已测绘区域或预设锚点",
+        "巨量能源",
+        "昂贵施法材料",
+        "大型战略设施"
+      ],
+      "limitations": [
+        "运载质量有限",
+        "产生可监测的空间扰动",
+        "不能替代人口迁移与日常贸易"
+      ],
+      "uses": [
+        "精锐舰队转移",
+        "外交人员转移",
+        "战略货物运输"
+      ]
+    }
+  },
+  "communication": {
+    "principle": "不存在低成本、无限带宽且能够任意连接两地的即时通信；信息通常比人员和物资移动得更快，但仍受航道拓扑、信标设施、传输容量和因果顺序限制",
+    "local_communication": {
+      "planetary": "通常近乎实时",
+      "in_system": "主要使用常规电磁与魔法载波，延迟从数分钟到数日不等"
+    },
+    "civilian_route_network": {
+      "mechanism": "信号沿稳定空间褶皱传播，并由航道站逐级校准和转发",
+      "typical_latency": {
+        "between_major_inner_domain_nodes": "数小时至数日",
+        "across_inner_domain": "数日至数周",
+        "across_barren_ring": "数月",
+        "across_civilization_domain": "一至五标准年"
+      },
+      "delay_factors": [
+        "航道受损",
+        "政治封锁",
+        "中继拥堵"
+      ]
+    },
+    "physical_data_transport": {
+      "purpose": [
+        "完整意识档案",
+        "大型人工智能",
+        "工业数据库",
+        "高精度战略观测资料"
+      ],
+      "latency": "由数据舰船运输时与普通航行相同"
+    },
+    "strategic_causal_links": {
+      "holders": "七大霸权和少数地区强权",
+      "requirements": [
+        "预先部署的固定锚点",
+        "通信锚点经过共同校准"
+      ],
+      "latency": "数秒至数小时",
+      "bandwidth": "低",
+      "uses": [
+        "战争警报",
+        "战略指令",
+        "身份签名",
+        "密钥交换",
+        "文明议会紧急通报"
+      ],
+      "cannot_transmit": [
+        "完整意识",
+        "大型人工智能",
+        "持续战场感知"
+      ]
+    },
+    "hard_limits": [
+      "通信只能传递信息，不能直接输送物质、能源或施法效果",
+      "远程指令必须由目的地已有的人员、人工智能或设施执行",
+      "正常通信不能在标准锚定时间中早于发送行为抵达"
+    ],
+    "security": {
+      "content": "通信内容可以加密",
+      "observable_metadata": [
+        "通信双方",
+        "时间",
+        "流量",
+        "优先级"
+      ],
+      "strategic_actions": [
+        "破坏航道通信设施",
+        "封锁航道通信设施",
+        "控制航道通信设施"
+      ]
+    },
+    "causality": "利用法则工程突破正常通信的因果顺序属于极端战略行为，并会造成可监测的因果扰动",
+    "black_zones": "没有信标、定位数据和稳定航道的黑区无法与已知文明保持常规通信；进入黑区的舰队必须自行返回、建设中继设施，或等待后续探索者发现其记录"
+  },
+  "magic_and_technology": {
+    "principle": "任何足够先进的魔法，都与科技无异",
+    "magic_science": "研究可观察、可验证、可重复利用的超常规律",
+    "magic_engineering": "将理论转化为工业、医疗、通信、航行、武器和社会基础设施",
+    "practitioners": "施法者可能是理论研究者、工程师、系统设计者或复杂魔法过程操作人员",
+    "civilian_access": "普通人可以操作成熟魔导设备，高阶系统仍依赖专业施法者设计、启动、监督和处理异常",
+    "conservation_law": {
+      "fundamental": "超统一态对象守恒",
+      "local_approximation": "绝大多数日常工程仍近似遵循质能守恒",
+      "exceptions": "强大施法者、尖端实验室和法则工程设施可明显突破局部质能账目",
+      "cost": "通常高于直接开采、运输和发电"
+    },
+    "industrial_basis": [
+      "矿产",
+      "恒星能",
+      "聚变燃料",
+      "大规模电力网络",
+      "实体物流"
+    ],
+    "strategic_only": [
+      "高维取能",
+      "物质生成"
+    ],
+    "post_scarcity": false
+  },
+  "technology_boundaries": [
+    {
+      "domain": "占卜",
+      "capability": "分析极复杂的未来概率",
+      "limit": "不能给出绝对正确的唯一未来"
+    },
+    {
+      "domain": "真相探测",
+      "capability": "利用观测、样本与因果联系进行推断",
+      "limit": "缺少观测、样本或因果联系时不能直接输出真相"
+    },
+    {
+      "domain": "意识上传",
+      "capability": "在中央环带霸权的核心地区已相对普及",
+      "limit": "不能证明哲学意义上的身份连续性"
+    },
+    {
+      "domain": "意识备份",
+      "capability": "保存记录时点的人格状态",
+      "limit": "复制体诞生后成为独立意识；无备份或信息残留的人格不能凭空恢复"
+    },
+    {
+      "domain": "任意远距离传送",
+      "capability": "理论上可行",
+      "limit": "当前工程能力尚未实现"
+    },
+    {
+      "domain": "普通时间技术",
+      "capability": "观测历史残留、调整局部时间速率、封存状态和推演未来分支",
+      "limit": "不能改变既定过去"
+    }
+  ],
+  "law_engineering": {
+    "definition": "在受控区域内少量、暂时修改局部宇宙规律的战略技术",
+    "strategic_significance": "有限实用化能力是超级霸权与地区强权之间的重要技术分界",
+    "modifiable_parameters": [
+      "空间距离",
+      "相互作用强度",
+      "施法条件",
+      "物质稳定区间",
+      "信息传播方式",
+      "少量时间方向"
+    ],
+    "requirements": [
+      "巨型锚定设施",
+      "有限作用范围",
+      "有限持续时间",
+      "有限目标参数"
+    ],
+    "immutable_law": "超统一态对象守恒",
+    "causal_rewrite": {
+      "status": "极端例外，不属于普通魔法",
+      "possible_modes": [
+        "少量逆转时间方向",
+        "部分倒置因果",
+        "修改有限历史线"
+      ],
+      "requirements": [
+        "围绕明确事件预先部署",
+        "建立有限改写区",
+        "支付高维代价"
+      ],
+      "residue": [
+        "残余记录",
+        "记忆错层",
+        "因果债"
+      ],
+      "non_reversible_consequences": "改写期间造成的伤亡、位移和物质变化不会在法则恢复后自动复原"
+    }
+  },
+  "technocratic_aristocratic_republic": {
+    "origin": "黑暗年代殖民先驱多为前文明技术人员，殖民地由此形成技术主义和施法者技官领导传统",
+    "formation": "早期中央霸权通过扶植本地施法者和授予共和自治权来同化新征服区，学院、导师网络和施法技官逐渐形成技术贵族阶层",
+    "nature": "技术贵族是政治社会学称呼，不是血统爵位",
+    "typical_titles": [
+      "院士",
+      "首席技官",
+      "大魔导师",
+      "学院元老",
+      "自治议员"
+    ],
+    "claimed_basis": [
+      "能力",
+      "学术贡献"
+    ],
+    "actual_power_channels": [
+      "评价标准",
+      "学院席位",
+      "师承谱系",
+      "研究资源",
+      "施法许可"
+    ],
+    "mobility": "允许平民通过教育进入，也可能淘汰能力不足的名门后代",
+    "structural_problem": "体系能够吸收外来人才，但由既有学阀决定谁算人才",
+    "status_in_12643": "除新世界同盟外的六大霸权均已终结本国技术贵族共和，但相关学院、地方自治集团和旧学阀仍有广泛影响"
+  },
+  "macro_history": [
+    {
+      "period": "黑暗年代与重新联络",
+      "time": "标准纪0年以前及其结束阶段",
+      "events": [
+        "远航殖民地长期彼此隔绝并独立发展政体、宗教、语言、亚种与特殊技术",
+        "重新联络带来统一历法、航道标准和跨殖民地贸易",
+        "中央力量开始向外围世界扩张"
+      ]
+    },
+    {
+      "period": "第一次殖民战争与教团年代",
+      "time": "教团年代持续约四百余年",
+      "events": [
+        "被征服区、外围政权和半独立殖民地在极端教权军团协调下反攻中央霸权",
+        "神圣议会成为文明大域事实上的主导力量",
+        "神圣议会代际分裂，激进派建立净化委员会并引发内战",
+        "殖民地政权与恢复力量的中央霸权合作并摧毁神圣议会",
+        "战后发生针对宗教军团及支持者的大规模清洗",
+        "少量残余组织逃入偏远殖民地和黑区",
+        "中央霸权转向施法技官自治，技术贵族共和全面成形"
+      ]
+    },
+    {
+      "period": "第二次殖民战争与外缘开发",
+      "time": "第二次殖民战争及战后",
+      "events": [
+        "五十多个殖民地总督在独立战争中联合形成新世界同盟",
+        "殖民活动继续向外推进并逐步形成荒芜环带",
+        "中央霸权支持殖民环带内缘地区独立，外环带由此形成"
+      ]
+    },
+    {
+      "period": "新域大革命",
+      "time": "约标准纪9000年至10000年",
+      "events": [
+        "外环带出现主张完整计算和统一调度社会的革命统合",
+        "革命统合正统路线试图由人工智能直接配置国家资本",
+        "中央环带与殖民环带的主导霸权前后夹击革命统合",
+        "革命之终战争后革命统合崩溃，旧领土出现大量代理国家",
+        "航道共和国与南境统合主权成为两支竞争性政治继承者，均不延续革命统合的完整法律主体"
+      ]
+    },
+    {
+      "period": "第三次殖民战争",
+      "time": "标准纪12154年前后",
+      "events": [
+        "哈那洛加德帝国联邦与新世界同盟联合入侵中央环带旧联邦",
+        "战争波及荒芜环带并造成当地大范围秩序崩溃",
+        "中央环带旧联邦在主战场打击和内部裂解下解体",
+        "旧联邦残余政府与多个政治军事集团签署联合条约并建立第六共和国",
+        "第六共和国沿用合众邦国家连续性，其名称来自合众邦历史上的第六次共和宪制重建",
+        "第六共和国联合外环带、荒芜环带诸国击退入侵者",
+        "七大霸权建立文明议会以维持战后均势"
+      ]
+    },
+    {
+      "period": "第六共和国终结",
+      "time": "标准纪12600年至约12635年",
+      "events": [
+        "战后红利消退，冻结数百年的内部战争重新爆发",
+        "企业州联合取得胜利",
+        "第六共和国终结并改组为康特雷纳企业联合"
+      ]
+    }
+  ],
+  "succession_rules": {
+    "principle": "政权更名、革命或宪制终结不必然消灭原有国家主体；法律连续性、制度继承和政治继承分别判断",
+    "types": {
+      "state_continuity": "国家主体延续，国号、政府或宪制可以改变",
+      "constitutional_reconstruction": "同一国家传统在制度崩溃后重新建立宪制",
+      "competitive_political_succession": "多个后继者分别继承旧政权的理念和制度，但没有任何一方延续完整法律主体",
+      "organizational_continuity": "同一组织在改名、迁移活动中心或取得国际承认后继续存在",
+      "alliance_foundation": "多个继续存在的成员政权共同建立新的联盟主体"
+    },
+    "council_seat_transfer": {
+      "principle": "霸权席位随战略国家连续性转移，不因政体更名或宪制终结自动消失",
+      "requirements": [
+        "控制前政权的主要战略设施",
+        "继续承担战略武器登记义务",
+        "继续承担航道安全义务",
+        "继续承担共同防御义务",
+        "获得其余霸权承认"
+      ]
+    }
+  },
+  "political_successions": [
+    {
+      "lineage_id": "kontreina-state-continuity",
+      "current_polity": "康特雷纳企业联合",
+      "state_continuity_name": "合众邦",
+      "sequence": [
+        "战前旧联邦政体",
+        "第六共和国",
+        "康特雷纳企业联合"
+      ],
+      "effective_year": 12635,
+      "date_precision": "approximate",
+      "succession_type": [
+        "state_continuity",
+        "constitutional_reconstruction"
+      ],
+      "legal_continuity": true,
+      "inherited": [
+        "核心领土",
+        "战略设施",
+        "主要国际条约",
+        "经确认债务",
+        "文明议会席位"
+      ],
+      "disputed": false,
+      "notes": "旧联邦是对第三次殖民战争前合众邦联邦政体的历史通称；第六共和国之名来自合众邦历史上的第六次共和宪制重建，前五次共和国的详细沿革不属于本文档范围"
+    },
+    {
+      "lineage_id": "hanalogard-imperial-continuity",
+      "current_polity": "哈那洛加德帝国联邦",
+      "sequence": [
+        "早期帝国联合体",
+        "哈那洛卡联合帝国",
+        "军事执政团",
+        "最高魔法院政权",
+        "哈那洛加德帝国联邦"
+      ],
+      "effective_year": 12024,
+      "date_precision": "approximate",
+      "succession_type": [
+        "state_continuity",
+        "constitutional_reconstruction"
+      ],
+      "legal_continuity": true,
+      "inherited": [
+        "核心领土",
+        "主要战略设施",
+        "主要国际义务"
+      ],
+      "disputed": false,
+      "notes": "11984年第一次褐日大革命建立军事执政团，约12024年第二次褐日大革命建立现体制；两次革命造成宪制断裂，但未消灭国家主体"
+    },
+    {
+      "lineage_id": "new-world-alliance-foundation",
+      "current_polity": "新世界同盟",
+      "sequence": [
+        "五十多个殖民政府",
+        "战时总督联盟",
+        "新世界同盟"
+      ],
+      "effective_year": null,
+      "date_precision": "unspecified",
+      "succession_type": [
+        "alliance_foundation"
+      ],
+      "legal_continuity": false,
+      "inherited": [
+        "成员殖民政府的共同防御职能",
+        "跨殖民地协调机制"
+      ],
+      "disputed": false,
+      "notes": "成员殖民政府没有因联盟成立而消失，中央权力来自各成员持续授权"
+    },
+    {
+      "lineage_id": "route-republic-revolutionary-succession",
+      "current_polity": "航道共和国",
+      "sequence": [
+        "革命统合",
+        "战后代理国家",
+        "航道统一战争",
+        "航道共和国"
+      ],
+      "effective_year": null,
+      "date_precision": "unspecified",
+      "succession_type": [
+        "competitive_political_succession"
+      ],
+      "legal_continuity": false,
+      "inherited": [
+        "贸易航路",
+        "金融清算",
+        "信用与保险",
+        "流通配给",
+        "物流体系"
+      ],
+      "disputed": true,
+      "notes": "与南境统合主权竞争革命统合的政治遗产，不拥有独占继承权"
+    },
+    {
+      "lineage_id": "southern-sovereignty-revolutionary-succession",
+      "current_polity": "南境统合主权",
+      "sequence": [
+        "革命统合",
+        "战后代理国家",
+        "南境统一战争",
+        "南境统合主权"
+      ],
+      "effective_year": null,
+      "date_precision": "unspecified",
+      "succession_type": [
+        "competitive_political_succession"
+      ],
+      "legal_continuity": false,
+      "inherited": [
+        "地方行政",
+        "人口档案",
+        "工业规划",
+        "国家资本管理"
+      ],
+      "disputed": true,
+      "notes": "与航道共和国竞争革命统合的政治遗产，不拥有独占继承权"
+    },
+    {
+      "lineage_id": "vanguard-polity-continuity",
+      "current_polity": "先锋邦",
+      "sequence": [
+        "早期拓殖者组织",
+        "先锋者联盟",
+        "先锋邦"
+      ],
+      "effective_year": 10264,
+      "date_precision": "exact",
+      "succession_type": [
+        "organizational_continuity"
+      ],
+      "legal_continuity": true,
+      "inherited": [
+        "成员组织",
+        "拓殖设施",
+        "共同防御义务"
+      ],
+      "disputed": false,
+      "notes": "布朗陶尔保卫战后的改名和霸权承认属于国际地位升级，没有建立新的法律主体"
+    },
+    {
+      "lineage_id": "outer-colonial-network-continuity",
+      "current_polity": "外殖民域拓殖者联盟",
+      "sequence": [
+        "早期边疆协议网络",
+        "拓殖者联合组织",
+        "外殖民域拓殖者联盟"
+      ],
+      "effective_year": null,
+      "date_precision": "after_third_colonial_war",
+      "succession_type": [
+        "organizational_continuity"
+      ],
+      "legal_continuity": true,
+      "inherited": [
+        "公开协议",
+        "信誉系统",
+        "技术标准",
+        "互助网络"
+      ],
+      "disputed": false,
+      "notes": "第三次殖民战争后转移活动中心并扩大成员范围，没有统一的领土国家前身"
+    }
+  ],
+  "major_powers": [
+    {
+      "name": "康特雷纳企业联合",
+      "common_old_name": "合众邦",
+      "region": "中央环带",
+      "government": "以国家企业为行政组织的中央集权共和国家",
+      "highest_institutions": [
+        "统一国家大会",
+        "最高宪政董事会"
+      ],
+      "organization": "国家部门兼具部委、产业集团和行政机关职能",
+      "doctrine": "国家高于市场，国家企业执行公共战略，公民身份和基本权利不能自由买卖",
+      "historical_origin": "第六共和国内战中企业州联合获胜后改组形成",
+      "state_continuity": "沿用合众邦国家连续性并继承第六共和国的主要国际权利与义务"
+    },
+    {
+      "name": "哈那洛加德帝国联邦",
+      "region": "中央环带",
+      "government": "加速主义技官专政和魔法师专政国家",
+      "highest_institutions": [
+        "最高魔法院",
+        "总指令长",
+        "帝国政务院"
+      ],
+      "organization": "最高魔法院提供主权来源，总指令长掌握最终行政与战略指令，人工智能负责社会建模和资源配置",
+      "doctrine": "文明持续处于技术、工业和军事竞争中，减速意味着被超越和毁灭",
+      "historical_origin": "11984年第一次褐日大革命建立军政府，约12024年第二次褐日大革命建立现体制"
+    },
+    {
+      "name": "新世界同盟",
+      "common_name": "殖民院",
+      "region": "殖民环带",
+      "government": "高度地方自治的总督与技术贵族共和共同体",
+      "highest_institutions": [
+        "自由区总督联席会议",
+        "总督同盟"
+      ],
+      "organization": "施法学院、总督集团和殖民技术官分享自治权，中央权力受地方集团制约",
+      "doctrine": "维持殖民自治、总督权力和技术贵族共和",
+      "structural_harm": "以谱系、技术、文化同化度、政治忠诚和殖民身份划分法律等级",
+      "historical_origin": "五十多个殖民地总督在第二次殖民战争中妥协联合"
+    },
+    {
+      "name": "航道共和国",
+      "region": "外环带",
+      "government": "通过商业网络实现总体统合的极权共和国",
+      "highest_institutions": [
+        "共和国公民理事会最高主席团"
+      ],
+      "organization": "市场发现需求与价格，国家清算、信用、保险和物流体系观察并调度社会关系",
+      "doctrine": "社会必须被完整组织，但高频交换不能由行政命令完全替代",
+      "structural_harm": "真正脱离合法商业网络的私人领域不存在",
+      "relation_with_southern_integrated_sovereignty": "在外部压力下合作，但因商业统合与行政统合之争拒绝合并",
+      "historical_origin": "革命统合的直接政治继承者之一"
+    },
+    {
+      "name": "南境统合主权",
+      "common_name": "南境",
+      "region": "外环带",
+      "government": "以专业官僚体系实现总体统合的行政国家",
+      "highest_institutions": [
+        "统合行政院",
+        "主权区最高委员会"
+      ],
+      "organization": "技官通过统一考试、轮调、匿名评议和持续绩效审计取得岗位，技术知识原则上归国家所有",
+      "doctrine": "学院声望、师承谱系和个人技术权威不能产生政治正当性",
+      "structural_harm": "专家被转化为行政系统中的可替换岗位，研究机构不能形成独立自治派系",
+      "relation_with_route_republic": "在外部压力下合作，但因行政统合与商业统合之争拒绝合并",
+      "historical_origin": "革命统合的直接政治继承者之一"
+    },
+    {
+      "name": "先锋邦",
+      "region": "荒芜环带",
+      "government": "先锋极权主义国家",
+      "organization": "政治权利来自前线服役、危险劳动和拓殖贡献",
+      "doctrine": "只有直接承担文明风险的人才有资格决定发展方向",
+      "structural_harm": "稳定生活与私人利益必须服从荒芜环带的长期开发使命",
+      "historical_origin": "早期拓殖者组织的分裂派系在10264年布朗陶尔保卫战后获得霸权承认",
+      "strategic_focus": "建设荒芜环带并抵挡内域霸权渗透，不持续向外殖民域扩张"
+    },
+    {
+      "name": "外殖民域拓殖者联盟",
+      "common_name": "拓殖联盟",
+      "region": "外殖民域",
+      "government": "技术无政府主义协议共同体",
+      "highest_institutions": [
+        "联盟元老会"
+      ],
+      "organization": "殖民地、舰队、技术公社和个人节点通过公开协议、信誉系统、自动契约、共同标准和互助网络协作",
+      "doctrine": "共同网络提供航道、通信、身份、救援和防御，但不直接命令成员内政",
+      "structural_limit": "没有统一行政、税制或常备官僚体系",
+      "historical_origin": "组织前身早于外殖民域概念，第三次殖民战争后转向新边疆并成为协议霸权"
+    }
+  ],
+  "civilization_council": {
+    "origin": "第三次殖民战争后由七大霸权建立",
+    "nature": "由七大霸权共同建立并授权的协调和均势体系，不是统一政府",
+    "authority_source": "全部权力来自七大霸权共同授权",
+    "legitimacy_and_neutrality": "由七大霸权共同保证",
+    "hegemonic_unanimity_principle": "核心授权、制度变更和重大决议必须取得七大霸权一致同意",
+    "cannot_do": [
+      "干涉霸权内政",
+      "依靠直属武力正面对抗任一霸权",
+      "允许下属机构自行扩大七大霸权授予的权限"
+    ],
+    "effective_authority": [
+      "共同航道标准",
+      "战略武器登记",
+      "快速机动通报",
+      "跨域仲裁",
+      "文明级灾害处置"
+    ],
+    "decision_rule": {
+      "core": "七大霸权一致同意",
+      "delegated_affairs": "授权范围内的日常行政和执行事务依照下属机构各自的表决规则处理",
+      "scope_limit": "下属机构的表决不能扩大议会核心授权"
+    },
+    "civilization_security_custodial_group": {
+      "name": "文明安全监护小组",
+      "nominal_affiliation": "文明议会",
+      "composition": "由七大霸权各自提供的少量精锐部队共同组成",
+      "actual_command": "由小组协调委员会指挥调动",
+      "nature": "执行七大霸权共同授权任务的有限联合部队",
+      "limitation": "不是能够独立对抗任何霸权的常备军"
+    },
+    "group_coordination_committee": {
+      "name": "小组协调委员会",
+      "role": "指挥调动文明安全监护小组",
+      "membership": {
+        "representatives_per_hegemony": 2,
+        "usual_representatives": [
+          "一名外交人员",
+          "一名本国派遣部队指挥官"
+        ],
+        "base_member_count": 14,
+        "chair_state_additional_members": 1,
+        "normal_total_members": 15
+      },
+      "chairmanship": {
+        "rotation_period_standard_years": 10,
+        "additional_representative_role": "委员会主席"
+      },
+      "voting": {
+        "votes_per_member": 1,
+        "approval_fraction": "三分之二",
+        "approval_votes_at_full_membership": 10,
+        "applicable_decisions": [
+          "联合部队调动",
+          "共同授权范围内的执行事务"
+        ]
+      },
+      "scope_limit": "扩大任务范围、改变议会核心授权或针对任一霸权采取强制行动，仍须七大霸权一致同意"
+    },
+    "controlled_lists": {
+      "names": [
+        "序列武器名录",
+        "禁忌物名单"
+      ],
+      "registration_scope": "所有参与文明议会相关机制的国家",
+      "regulated_categories": [
+        "高危武器",
+        "高危技术",
+        "高危物品"
+      ],
+      "classification": {
+        "primary_basis": "对象的武器化难度和当前用途",
+        "sequence_weapon_registry": "记录经过设计、能够部署、具有明确军事用途的武器与配套技术",
+        "taboo_item_list": "记录尚未形成稳定武器系统，却可能造成失控复制、意识污染、因果异常、法则破坏或文明级灾害的物品和异常对象",
+        "boundary_rule": "越容易被稳定控制、重复部署并用于军事目的，越倾向列入序列武器名录；难以武器化但自身风险极高的对象列入禁忌物名单"
+      },
+      "registration_requirement": "强制登记",
+      "supervisory_body": "名单监察执行小组",
+      "enforcement": "由七大霸权负责执行",
+      "disclosure_model": {
+        "full_intelligence_required": false,
+        "shared_index_contains": [
+          "对应空位",
+          "唯一编号"
+        ],
+        "shared_index_purpose": "表明登记对象被申报为已经纳入监管体系，并维持最低限度互信",
+        "withheld_details": [
+          "详细性质",
+          "技术参数",
+          "数量",
+          "位置",
+          "处置方式"
+        ],
+        "detail_custody": "由承担执行责任的霸权依照共同规则保管",
+        "expanded_disclosure": "须由七大霸权另行一致授权"
+      },
+      "integrity_limits": {
+        "independent_verification": false,
+        "known_possibilities": [
+          "霸权虚报项目",
+          "霸权漏报项目",
+          "以一个编号掩盖多个项目"
+        ],
+        "council_capability": "文明议会通常无法独立发现或证伪霸权申报中的上述行为",
+        "meaning_of_registration": "编号占位只能证明存在申报行为，不能证明申报内容完整真实"
+      },
+      "regulatory_asymmetry": {
+        "hegemonic_projects": "七大霸权对本国项目实行实质上的自我监管",
+        "function_for_hegemons": "提供最低互信和危机联络框架",
+        "primary_enforcement_targets": "中小参与国",
+        "intentional_design": true,
+        "rationale": "这种监管不对称是七大霸权共同授权文明议会时保留的制度目的，不是议会能够自行纠正的执行缺陷"
+      }
+    },
+    "seat_succession": {
+      "principle": "霸权席位随战略国家连续性转移，不因政体更名或宪制终结自动消失",
+      "kontreina": "康特雷纳企业联合继承第六共和国席位",
+      "revolutionary_successors": "革命统合在文明议会成立前已经灭亡，航道共和国与南境统合主权分别以独立霸权身份取得席位"
+    },
+    "practical_result": "维持均势和相对和平，但无法消除代理冲突、地区竞争和技术军备竞赛",
+    "other_polities": [
+      "地区强权",
+      "中小国家",
+      "自由港",
+      "自治节点",
+      "国际管理区"
+    ]
+  },
+  "strategic_military": {
+    "regional_power_capability": "可拥有令行星失去宜居条件的武器",
+    "hegemonic_capabilities": [
+      "碎裂行星",
+      "点燃大气",
+      "摧毁恒星系关键结构",
+      "短暂修改局部宇宙规律"
+    ],
+    "deployment_constraints": [
+      "需要巨型设施",
+      "需要漫长充能",
+      "部署可被提前监测",
+      "依赖庞大工业和基础设施"
+    ],
+    "strategic_foundations": [
+      "航道锚点",
+      "法则工程设施",
+      "恒星能源系统",
+      "跨域通信网",
+      "战略快速机动设施"
+    ],
+    "doctrine": "歼星级武器是霸权威慑资产，不是个人或普通舰船的战术火力"
+  },
+  "consistency_constraints": [
+    "七大霸权是区域秩序中心，不是覆盖全部星域的统一帝国",
+    "文明议会的权力、合法性和中立性来自七大霸权共同授权，任何下属机构都不能绕过霸权一致原则扩大权限",
+    "序列武器与禁忌物登记不能排除霸权虚报、漏报或合并编号；七大霸权保留自我监管权，议会的强制监管主要针对中小参与国",
+    "政权更名、革命和宪制终结不自动消灭国家主体；法律连续性、制度继承和政治继承必须分别判断",
+    "星域距离具有实际意义，普通跨域旅行以月、年乃至数十年计算",
+    "跨域通信依赖航道、信标和中继设施；只有固定锚点之间能够进行低带宽战略即时通信",
+    "魔法是可研究和工程化的自然规律，不是无条件实现愿望的能力",
+    "高维取能、物质生成、远距离传送、时间干预和因果改写具有严格边界",
+    "物资、能源、航道、工业能力和实体物流仍是文明运行基础",
+    "意识复制产生新的独立意识，备份不自动等同于原人格延续",
+    "古代历史只能被局部还原，不存在一次性解释全部文明起源的权威资料",
+    "七大霸权都能解决现实问题，也都会制造结构性伤害，不存在制度上天然正确的一方",
+    "文明议会压制全面战争，但无法消除代理冲突、地区竞争和技术军备竞赛"
+  ],
+  "glossary": [
+    {
+      "term": "文明大域",
+      "definition": "由共同殖民起源、航道网络和跨域制度联系起来的超大尺度文明空间"
+    },
+    {
+      "term": "环带",
+      "definition": "由航道密度、航程、殖民历史和政治边界形成的不规则三维区域"
+    },
+    {
+      "term": "内域",
+      "definition": "中央环带、间环带、外环带与殖民环带的合称"
+    },
+    {
+      "term": "黑区",
+      "definition": "未被稳定航道与定位网络覆盖的未知或失联空间"
+    },
+    {
+      "term": "魔法学",
+      "definition": "研究可验证超常规律的科学体系"
+    },
+    {
+      "term": "魔法技术",
+      "definition": "将魔法学规律工程化的技术体系"
+    },
+    {
+      "term": "施法者技官",
+      "definition": "掌握高级魔法理论、工程和系统操作能力的专业技术阶层"
+    },
+    {
+      "term": "技术贵族共和",
+      "definition": "由学院、师承网络和施法技官分享政治权力的学阀共和制度"
+    },
+    {
+      "term": "法则工程",
+      "definition": "在严格范围和代价约束下暂时修改局部宇宙规律的战略技术"
+    },
+    {
+      "term": "超统一态对象守恒",
+      "definition": "高于局部质能守恒的宇宙根本守恒关系"
+    },
+    {
+      "term": "战略快速机动",
+      "definition": "依靠预设锚点和大型设施进行有限跨域快速运输的霸权技术"
+    },
+    {
+      "term": "文明议会",
+      "definition": "七大霸权在第三次殖民战争后共同建立并授权的均势协调体系"
+    },
+    {
+      "term": "文明安全监护小组",
+      "definition": "由七大霸权各自提供少量精锐部队组成、名义上归属文明议会的有限联合部队"
+    },
+    {
+      "term": "小组协调委员会",
+      "definition": "由七大霸权代表组成并负责指挥调动文明安全监护小组的联合委员会"
+    },
+    {
+      "term": "序列武器名录",
+      "definition": "记录经过设计、能够部署并具有明确军事用途的武器与配套技术的编号监管名录"
+    },
+    {
+      "term": "禁忌物名单",
+      "definition": "记录难以稳定武器化，但可能造成失控复制、意识污染、因果异常、法则破坏或文明级灾害的物品与异常对象的编号监管名单"
+    }
+  ]
+}

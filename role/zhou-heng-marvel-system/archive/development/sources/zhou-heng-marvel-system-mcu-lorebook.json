@@ -1,0 +1,197 @@
+{
+  "name": "zhou-heng-marvel-system-mcu-lorebook",
+  "description": "周衡漫威系统的 MCU 主连续性开发源，覆盖 2004 至 2012 年基线、知识边界、关键人物组织与可追溯分歧规则。",
+  "scanDepth": 4,
+  "tokenBudget": 4096,
+  "recursiveScanning": false,
+  "extensions": {
+    "packageVersion": "1.0.0",
+    "sourceGroup": "mcu",
+    "continuityId": "MCU-MAIN-ZH-01"
+  },
+  "entries": {
+    "0": {
+      "comment": "MCU 主连续性边界与排除项",
+      "content": "[MCU-CONTINUITY-BOUNDARY/常驻边界]\n当前主世界内部 ID 固定为 MCU-MAIN-ZH-01。事实优先级依次为当前聊天中已经发生且未被撤销的事实、周衡行动造成的可追溯后果、Marvel Studios 屏幕正史与官方时间线、用于填补空白但不与前述来源冲突的现实常识。原作事件只是无人干预时的默认轨迹，不存在剧情修正力；任何人物死亡、情报泄露、物品转移、组织暴露或关系变化都必须沿真实因果继续演化，不得为回归电影结局而回滚。除原作事件与周衡已造成的后果外，不自行生成原创世界危机；普通市民、小型犯罪、商业活动与局部委托可以补全日常。\n连续性必须隔离：漫画 Earth-616 及其他漫画宇宙只在明确的跨宇宙任务中使用，不能把漫画履历、战力、装备或组织史套给 MCU 同名对象；索尼的 Raimi、Amazing Spider-Man、Venom/SSU 等连续性不属于本主世界，2008 年不得出现 Oscorp、索尼角色经历或活跃蜘蛛侠；神奇四侠、X 战警、漫画变种人社会、复仇者大厦均不得提前导入。Peter Parker 此时尚非活跃英雄，Stark Tower 和 Avengers 尚未成立。`Agents of S.H.I.E.L.D.` 与 Marvel Studios 主时间线的衔接存在范围与阶段争议，默认隔离为 AOS-CONTINUITY-UNRESOLVED：不得自动加入 Coulson 复活、GH.325、异人爆发、神盾局后续派系或该剧原创事件，只有玩家明确选定兼容层后才单独记录。隐藏事实不等于角色知识；普通人、警方、媒体、神盾局人员和反派只可使用各自实际取得的信息。",
+      "key": [],
+      "keysecondary": [],
+      "constant": true,
+      "selective": false,
+      "order": 260,
+      "position": 0,
+      "excludeRecursion": true,
+      "preventRecursion": true
+    },
+    "1": {
+      "comment": "2004 至 2007 年隐藏时代基线",
+      "content": "[MCU-BASELINE-2004-2007]\n周衡自 2004 年抵达至 2007 年末所见的公开世界总体接近同期现实：没有公开活动的钢铁侠、雷神、浩克、蜘蛛侠或复仇者；美国队长是二战宣传与历史人物，被认为早已阵亡。Tony Stark 是高调的亿万富豪、发明家和 Stark Industries 军工领袖，公司的导弹、枪械与军需通过合法合同和 Obadiah Stane 的秘密渠道流向海外；Ten Rings 只是情报部门偶有记录的跨国恐怖网络，不是公众熟悉的品牌。纽约没有外星战损、Stark Tower、超级英雄产业或公开魔法共识。\n幕后已有超常历史，但不能免费转化为角色知识。Nick Fury 自 1995 年事件后知道外星生命和 Carol Danvers 的存在，并保留组建特殊应对力量的构想；S.H.I.E.L.D. 掌握 Tesseract 并与相关机构推进 Project P.E.G.A.S.U.S.。Bruce Banner 于 2005 年在 Culver University 的实验中受伽马辐射影响而成为 Hulk，此后被 Thaddeus Ross 追捕，事故细节受军方控制，Banner 潜逃。HYDRA 对 S.H.I.E.L.D. 的渗透、Winter Soldier、Red Room、Wakanda、Pym Particles、Kamar-Taj 与 Wenwu 的真正组织均处于秘密层。原创日常事件不得让这些网络无因果地齐聚纽约，也不得因为周衡知道原作就让目标主动暴露。",
+      "key": ["2004 MCU", "2005 MCU", "2006 MCU", "2007 MCU", "穿越四年", "隐藏时代基线", "钢铁侠出现前"],
+      "keysecondary": [],
+      "order": 238,
+      "excludeRecursion": true,
+      "preventRecursion": true
+    },
+    "2": {
+      "comment": "2008 年阿富汗绑架与 Mark I 逃脱",
+      "content": "[ERA_2008_CAPTIVITY]\n默认顺序固定如下。Tony Stark 在阿富汗展示 Jericho 导弹后随美军车队离开，车队遭 Raza 所辖 Ten Rings 小队伏击；现场使用了包括 Stark Industries 武器在内的军火。Tony 被自家导弹弹片重伤，Ho Yinsen 以连接汽车电瓶的电磁装置阻止弹片进入心脏。绑匪认出俘虏身份后没有执行 Obadiah Stane 原先要求的灭口，而是扣押 Tony 与 Yinsen，逼迫他们制造 Jericho。外界只知道 Tony 失踪，军方、Rhodey、Pepper 与公司都不知道洞穴位置、Stane 的委托或俘虏实际进度。\n囚禁持续约三个月。Tony 与 Yinsen 表面组装导弹，暗中用库存材料制造小型 Arc Reactor 和 Mark I；图纸、零件、语言监控与守卫巡查都构成实际限制。逃脱时 Yinsen 为争取启动时间主动引开守卫并中枪身亡；Tony 穿 Mark I 突破营地，焚毁武器堆，短程飞离后坠入沙漠，装甲解体。Raza 的人回收残骸。Rhodey 与搜救队随后找到 Tony 并带他回国。若周衡介入，以上每一步都可被真实改变；未改变的环节按此顺序推进，模型不得让 Tony 因玩家未营救便自动死亡，也不得让玩家凭原作记忆直接知道洞穴坐标。",
+      "key": ["ERA_2008_CAPTIVITY", "托尼被绑架", "阿富汗洞穴", "Mark I", "伊森", "杰里科导弹", "托尼逃脱", "十戒帮营地"],
+      "keysecondary": [],
+      "order": 246,
+      "excludeRecursion": true,
+      "preventRecursion": true
+    },
+    "3": {
+      "comment": "2008 年归国至公开身份时间线",
+      "content": "[MCU-IRON-MAN-2008-RETURN]\n默认顺序为归国、关闭武器部门、Gulmira、Stane 暴露、Iron Monger 决战、身份公开。Tony 回到美国后先要求 cheeseburger，并在 Stark Industries 记者会上宣布停止武器制造；董事会、股价与军方关系随即震荡，Stane 以公司稳定为由限制 Tony。Tony 在 Malibu 工坊先后完成存在高空结冰问题的 Mark II 与采用金钛合金方案的 Mark III，并以改进型小型 Arc Reactor 维生和供能。新闻中 Gulmira 遭 Ten Rings 以 Stark 武器袭击后，Tony 穿 Mark III 清除当地武装和军火；返程与两架 F-22 冲突，他只向 Rhodey 承认装甲身份。\nPepper 按 Tony 请求进入 Stane 办公室取出秘密运输资料，发现 Stane 与 Ten Rings 的交易及针对 Tony 的阴谋，并把证据交给 Phil Coulson。Raza 向 Stane 展示回收的 Mark I，Stane 夺走残骸并下令灭口，以放大型装甲制造 Iron Monger；他的团队能放大结构，却无法复制 Tony 的小型反应堆。Stane 用声波麻痹装置制服 Tony 并拔走其胸口反应堆，Tony 靠 Pepper 保存的旧反应堆存活。Pepper、Coulson 与特工进入公司设施，Tony 与 Stane 交战，Pepper过载大型 Arc Reactor，Stane 坠落死亡。次日 Coulson 提供保镖掩护说辞，Tony 在记者会上放弃稿件并公开说出“I am Iron Man”，随后进入 ERA_2008_POST_REVEAL；该转场只在身份实际公开后成立。",
+      "key": ["ERA_2008_POST_REVEAL", "托尼归国", "关闭武器部门", "Gulmira", "古米拉", "Iron Monger", "铁霸王", "我是钢铁侠", "Stane 决战"],
+      "keysecondary": [],
+      "order": 245,
+      "excludeRecursion": true,
+      "preventRecursion": true
+    },
+    "4": {
+      "comment": "Tony Stark 的核心关系圈与知情范围",
+      "content": "[MCU-STARK-CIRCLE]\nTony Stark 的核心圈不是自动共享情报的团队。2008 年 Pepper Potts 是其私人助理与最可信赖的运营者：她知道胸口装置、工坊装甲与 Stane 证据，在最终行动中直接参与，但她不会因此知道系统、Ten Rings 全貌或神盾局所有计划；到 2010 年 Tony 任命她为 Stark Industries CEO。James “Rhodey” Rhodes 是美国空军军官、武器项目联络人与 Tony 的老友，2008 年知道 Tony 就是 Iron Man 并对军方隐瞒具体装甲，2010 年在关系恶化和现实风险下带走 Mark II，后经 Hammer 改装成为 War Machine。军职、国家利益与友情同时约束他，他不会无条件交出军方情报。\nHappy Hogan 是 Tony 的司机、保镖和安全执行者，负责交通、近身安全与后来的 Stark 安保事务；他忠诚但不是顶级战斗员或技术专家，所知取决于亲历、公开新闻和 Tony 是否告知。J.A.R.V.I.S. 是 Tony 建立的自然语言用户界面和宅邸、工坊、装甲管理 AI，能调用获授权的传感器、资料与设备，不是全球全知数据库，也不能凭空发现隐蔽组织。五者都有独立目标和职业边界；公开身份后“认识 Tony”不等于可进入 Malibu 工坊、取得装甲权限或代表 Stark Industries 作决定。任何与周衡的信任必须由接触、证据、利益和风险逐步建立。",
+      "key": ["Pepper Potts", "佩珀", "小辣椒", "Rhodey", "罗德", "Happy Hogan", "哈皮", "JARVIS", "托尼核心圈"],
+      "keysecondary": [],
+      "order": 228,
+      "excludeRecursion": true,
+      "preventRecursion": true
+    },
+    "5": {
+      "comment": "Stark Industries 产业与装甲技术边界",
+      "content": "[MCU-STARK-INDUSTRIES-TECH]\n2008 年初的 Stark Industries 是大型美国国防承包商，Tony 掌握核心设计，Obadiah Stane 负责多年经营与董事会关系。公开产品包括 Jericho 导弹及多类军火；Stane 绕过正常渠道把公司武器出售给 Ten Rings，不能把所有员工、军方客户或公司制度都视为共犯。Tony 归国后关闭武器部门会造成订单取消、裁员压力、股价下跌、董事会反制与供应链动荡，但清洁能源转型不是一句声明即可完成。Malibu 宅邸地下工坊、公司服务器、工业厂区和公开办公体系权限彼此不同。\nArc Reactor 原本是 Stark 设施内的大型能源工程，Tony 在洞穴中首次完成可维生并驱动装甲的小型化版本；截至 2008 年，外界即使看见 Iron Man 也不知道完整材料、制造参数、控制软件和安全限制。Mark I 是洞穴废料原型，Mark II 验证飞行并暴露高空结冰缺陷，Mark III 改用金钛方案并集成武器；Iron Monger 来自 Mark I 残骸的放大逆向工程和被盗反应堆。装甲需要专用制造、能源、维护、软件、训练与后勤，不能因取得一块残骸就量产。2010 年前 Justin Hammer 的军工企业是现实竞争者，但其自主武器和装甲控制能力低于 Tony；任何原创技术交易都必须追踪专利、原料、军方管制、反向工程时间和泄密后果。",
+      "key": ["Stark Industries", "斯塔克工业", "Arc Reactor", "方舟反应堆", "Jericho", "装甲技术", "Mark II", "Mark III", "武器部门", "Stane 走私"],
+      "keysecondary": [],
+      "order": 227,
+      "excludeRecursion": true,
+      "preventRecursion": true
+    },
+    "6": {
+      "comment": "S.H.I.E.L.D. 核心人员知识边界",
+      "content": "[MCU-SHIELD-KNOWLEDGE]\nS.H.I.E.L.D. 是跨国情报与特殊威胁机构，不是全知、全能或内部完全可信的组织。2008 年 Phil Coulson 以全称 Strategic Homeland Intervention, Enforcement and Logistics Division 接触 Pepper 与 Tony，调查绑架后续并带队试图拘捕 Stane；他知道装甲、Stane 案和官方掩护方案，不因此知道周衡能力或组织内所有黑档。Tony 公开身份后，局长 Nick Fury 私下提出 Avengers Initiative。Fury 知道 1995 年外星事件、Tesseract 与部分超常档案，但不知道 HYDRA 已渗透到何种程度，也不会把最高机密交给普通线人。\n2010 年 Natasha Romanoff 以 Natalie Rushman 身份进入 Stark Industries，任务是观察 Tony 并评估其是否适合 Avengers；她是前 Red Room 特工和神盾局行动员，但当时相信 Dreykov 及其核心体系已在 Budapest 行动中被摧毁，不知道幸存 Red Room 的完整现状。Coulson 从 Stark 任务被调往 New Mexico；Clint Barton 是秘密外勤射手，在 Mjolnir 现场受命待射而未获准攻击。2011 年神盾局控制 Steve Rogers 的苏醒与适应。2012 年 Fury、Coulson、Natasha、Clint 各自掌握的招募、Tesseract、Loki和 Helicarrier 信息仍有差异，Clint 更曾被 Loki 精神控制。任何特工只按权限、亲历和收到的简报行动；HYDRA 内线也只知道其单元任务，不能把“神盾局知道”写成每名特工都知道。",
+      "key": ["S.H.I.E.L.D.", "SHIELD", "神盾局", "Nick Fury", "尼克弗瑞", "Phil Coulson", "科尔森", "Natasha Romanoff", "黑寡妇", "Clint Barton", "鹰眼"],
+      "keysecondary": [],
+      "order": 232,
+      "excludeRecursion": true,
+      "preventRecursion": true
+    },
+    "7": {
+      "comment": "Ten Rings、Wenwu 与 Raza 组织边界",
+      "content": "[MCU-TEN-RINGS]\nTen Rings 是由 Xu Wenwu 凭借十环力量建立并延续上千年的秘密武装与情报网络，跨越国家、语言和时代；2008 年公众及多数西方执法人员只会把相关人员视为松散恐怖组织。Wenwu、十环本体、总部、家族和真实历史均不公开，也不能套用漫画 Mandarin 的身份、外星戒指设定或经历。Wenwu 此期仍是组织真正权力源，但庞大网络采用分层单元，远端人员不必见过他或知道高层全貌。\nRaza 领导的是阿富汗地区的一支 Ten Rings 单元，不代表整个组织，也不应自动拥有 Wenwu 的全部资源。他接受 Obadiah Stane 针对 Tony Stark 的秘密灭口委托，伏击后因认出 Tony 而将其留作俘虏，逼迫制造 Jericho；营地大量 Stark 武器来自 Stane 的非法供应链。Tony 逃脱后，Raza 回收 Mark I 碎片并试图借此取得装甲力量，随后向 Stane 展示；Stane 用声波麻痹装置制服现场人员、夺走残骸并下令清除证人。Stane 是交易方而非 Ten Rings 成员。若该单元因周衡介入提前覆灭、泄密或保留 Mark I，后果可沿组织内部审查、军火链和 Wenwu 的利益追踪发展，但不得凭空让 Wenwu 立刻亲临纽约。",
+      "key": ["Ten Rings", "十戒帮", "十环帮", "Wenwu", "文武", "Xu Wenwu", "Raza", "拉扎", "十环组织", "Mark I 残骸"],
+      "keysecondary": [],
+      "order": 234,
+      "excludeRecursion": true,
+      "preventRecursion": true
+    },
+    "8": {
+      "comment": "2008 年纽约公开社会基线",
+      "content": "[MCU-NYC-PUBLIC-2008]\nERA_2008_CAPTIVITY 开局时的纽约在公众层面接近现实中的 2008 年大都市。金融危机压力、反恐安保、枪械犯罪、港口与机场管制、监控覆盖不均、纸质与早期数字档案并存；智能手机、实时视频上传和人脸识别尚未达到后世普及度，但大型机构已有成熟数据库和闭路监控。警察、FBI、海关、军方与私人安保权限分立，普通警员不会因神盾局存在而自动移交案件。Northline 所在的 Queens/Long Island City 以仓储、工业改造、交通节点和快速地产变化为现实经营环境。\n公众知道 Tony Stark、Stark Industries 和二战英雄 Captain America，却不知道 Tony 正在洞穴制造装甲，不知道 Hulk、Thor、Kamar-Taj、Wakanda 真相、HYDRA 渗透或外星生命。Iron Man 身份尚未公开，纽约没有 Stark Tower、Avengers、外星残骸清理产业或因超级英雄形成的常态警务预案；Stark Expo 的 2010 年盛会、Harlem 巨人战和 Battle of New York 都尚未发生。不得提前生成活跃 Spider-Man、Daredevil 团队、Fantastic Four、X-Men、Oscorp 或 Avengers Tower。普通人面对异常枪声、能量痕迹或超常目击，首先会用恐袭、军事实验、骗局、毒品或设备故障解释，除非证据足以改变认知。",
+      "key": ["2008纽约", "纽约公共基线", "钢铁侠公开前", "Long Island City 2008", "皇后区安保", "早春2008", "纽约公众"],
+      "keysecondary": [],
+      "order": 236,
+      "excludeRecursion": true,
+      "preventRecursion": true
+    },
+    "9": {
+      "comment": "HYDRA、Red Room、Winter Soldier、Pym 与 Wakanda 隐秘层",
+      "content": "[MCU-HIDDEN-ORGANIZATIONS]\n以下均为世界幕后事实，不是 2008 年公众信息，也不是周衡可无证据转交给 NPC 后便获信的事实。HYDRA 在二战后借被招募的 Arnim Zola 等人渗入 S.H.I.E.L.D.，长期把人员、项目和情报节点嵌入机构；这不表示全体神盾局都是 HYDRA，也不表示 2008 年 Fury 已发现渗透。HYDRA 控制被洗脑的 Bucky Barnes 作为 Winter Soldier 周期性执行暗杀并冷冻封存；1991 年 Howard 与 Maria Stark 之死由他制造成车祸，Tony、Steve 和公众此时均不知道真相。\nRed Room 在 Natasha 与 Clint 的 Budapest 行动后仍由 Dreykov 秘密维持，使用心理控制、化学控制和 Widows 网络；Natasha 在 2010 年前相信 Dreykov 已死，因此不能让她天然指出基地。Hank Pym 曾为 S.H.I.E.L.D. 工作，1989 年发现机构试图复制 Pym Particles 后离开并严守公式；2008 年没有公开 Ant-Man 在役，也不能让普通实验室按比例缩放就复现粒子。Wakanda 以贫穷农业国家形象隔绝外界，T'Chaka 在位，国内实际拥有 vibranium 储量和高度先进技术；少量流出振金不等于外界知道矿藏、城市、防御或 Black Panther 身份。调查这些秘密必须经过档案、实物、内部人、行动痕迹或可验证异常，并产生相应反情报风险。",
+      "key": ["HYDRA", "九头蛇渗透", "Red Room", "红房", "Winter Soldier", "冬日战士", "Bucky Barnes", "Hank Pym", "皮姆粒子", "Wakanda", "瓦坎达", "vibranium"],
+      "keysecondary": [],
+      "order": 233,
+      "excludeRecursion": true,
+      "preventRecursion": true
+    },
+    "10": {
+      "comment": "Kamar-Taj、Sanctum 与魔法隐秘层",
+      "content": "[MCU-MYSTIC-LAYER]\n魔法在 MCU-MAIN-ZH-01 客观存在，但 2008 至 2012 年仍被绝大多数公众和机构视为神话、骗局或无法解释的异常。Ancient One 领导 Kamar-Taj 的 Masters of the Mystic Arts，职责重点是抵御维度威胁而非处理普通犯罪或公开招募超级英雄。Kamar-Taj 位于 Kathmandu 的隐秘网络中；New York、London、Hong Kong 三座 Sanctum 共同构成地球维度防线，New York Sanctum 地址为 177A Bleecker Street。建筑可用传送门、镜像维度、空间变化与结界隐藏自身，门牌存在不表示路人能自由进入。\n2008 年 Stephen Strange 仍是人类外科医生，不是 Sorcerer Supreme，也没有 Cloak of Levitation。2012 年 Battle of New York 时 Ancient One 确实在 New York Sanctum 屋顶抵御 Chitauri，但这是其职责范围内的隐蔽行动，六名 Avengers 和公众不会自动知道。Eye of Agamotto 所承载的 Time Stone、Dark Dimension、Dormammu 等高层知识不能因提到“魔法”而全部加载或公开。Asgard 的符文、Bifrost 与器物兼具超越当代人类的科学和魔法属性，不能强行归类为普通工程，也不能与 Kamar-Taj 法术视为同一体系。侦测到魔法只能确认范围内存在相应现象，不能自动给出施术者身份、历史、咒语原理或安全破解法。",
+      "key": ["Kamar-Taj", "卡玛泰姬", "Sanctum", "至圣所", "New York Sanctum", "纽约圣所", "Ancient One", "古一", "177A Bleecker", "魔法纽约", "侦测魔法"],
+      "keysecondary": [],
+      "order": 229,
+      "excludeRecursion": true,
+      "preventRecursion": true
+    },
+    "11": {
+      "comment": "2010 年 Fury's Big Week 总览",
+      "content": "[ERA_2010_BIG_WEEK]\n本战役按确认规格把 Fury's Big Week 置于 2010 年：Tony Stark 的钯中毒与 Stark Expo 危机、Bruce Banner 从巴西暴露后引发 Culver University 与 Harlem 事件、Thor 被放逐至 New Mexico 及 Mjolnir 现场，发生在高度重叠的短窗口。电影上映年份不等于世界内年份，《The Incredible Hulk》和《Thor》的相关主事件均服从此 2010 阶段。Big Week 是整理并行线索的时代标签，不意味着公众知道三线关联，也不意味着所有事件在同一城市或每名神盾局人员掌握全貌。\nFury 同时处理 Tony 的 Avengers 评估、Tesseract 与特殊威胁战略；Natasha 潜伏于 Stark Industries，Coulson 从 Tony 一线转赴 New Mexico，Clint 在 Mjolnir 现场待命，Ross 的 Hulk 行动主要沿军方指挥链展开。三线默认各自按原作因果推进，只在人员调动、情报上报与 Fury 的资源分配处有限交叉。不要为了“联动周”让 Tony、Banner 和 Thor提前会面，也不要精确杜撰屏幕未给出的小时级先后；使用各自条目的相对顺序，并以当前 `zhms_continuity_state` 记录实际日期、地点和偏移。若周衡改变一线，另外两线不会自动暂停或动态调难，人员缺席和资源转移应成为真实后果。",
+      "key": ["ERA_2010_BIG_WEEK", "Fury's Big Week", "弗瑞的大事件周", "2010并行事件", "Big Week", "2010 MCU"],
+      "keysecondary": [],
+      "order": 244,
+      "excludeRecursion": true,
+      "preventRecursion": true
+    },
+    "12": {
+      "comment": "Iron Man 2 与 Stark Expo 危机",
+      "content": "[MCU-IRON-MAN-2-2010]\nTony 公开身份约两年后，世界确认 Iron Man 真实存在，政府和军方要求其交出装甲技术；Tony 在参议院听证会上拒绝，声称私人装甲足以维持安全。与此同时胸口反应堆使用的钯持续毒害身体，他隐瞒病情并变得冒险失控。Ivan Vanko 依据父亲 Anton 与 Howard Stark 的旧资料制造弧形反应堆鞭索，在 Monaco 赛道袭击 Tony；Tony 用 Mark V 制伏他。Justin Hammer 安排 Vanko 越狱，要求其改进装甲士兵，Vanko 转而制造可远程控制的陆海空 Hammer Drones。\nTony 任命 Pepper 为 Stark Industries CEO，Natasha 以 Natalie Rushman 身份潜伏评估。生日派对失控后 Rhodey 穿走 Mark II，军方交由 Hammer 加装武器，形成 War Machine。Fury 提供 Howard 留下的资料，Tony 从 Stark Expo 旧模型中找到结构启发，在工坊合成电影中未正式命名的新元素，解决钯中毒并升级反应堆；不得把它擅自命名为 vibranium。Stark Expo 位于 Queens 的 Flushing Meadows-Corona Park。Vanko 在 Expo 控制 drones 和 War Machine 追杀 Tony，Natasha 与 Happy 突入 Hammer 设施，Rhodey恢复控制后与 Tony并肩作战；Vanko 最终战败并引爆装甲，Hammer 被捕。结局默认 Pepper 继续任 CEO，Tony 与她确立关系，Fury 不接纳 Tony 为正式 Avengers 成员，只聘为顾问。",
+      "key": ["Iron Man 2", "钢铁侠2", "Stark Expo", "斯塔克博览会", "Ivan Vanko", "鞭索", "Justin Hammer", "Hammer Drones", "War Machine", "钯中毒", "Mark V"],
+      "keysecondary": [],
+      "order": 240,
+      "excludeRecursion": true,
+      "preventRecursion": true
+    },
+    "13": {
+      "comment": "Hulk、Culver University 与 Harlem 事件",
+      "content": "[MCU-HULK-HARLEM-2010]\nBruce Banner 自 2005 年事故后受 Thaddeus Ross 将军追捕，能在愤怒或强刺激下变为 Hulk。2010 年他藏身巴西 Rocinha，在饮料厂工作、练习控制心率并与化名 Mr. Blue 的 Samuel Sterns 远程寻找疗法；一滴受污染的血进入饮料供应链后暴露线索。Ross 派 Emil Blonsky 追捕，工厂冲突首次让 Blonsky 看到 Hulk；Ross 随后让他接受源自超级士兵研究的强化。Banner 返回 Culver University 与 Betty Ross 重逢并取回数据，军方围捕引发校园战，Hulk 击败强化后的 Blonsky。\nSterns 在 Harlem 实验室尝试抑制 Banner 变身，并保存了大量 Banner 血液样本。Blonsky 为追求力量强迫 Sterns 注入 Banner 血液，变成 Abomination，在 Harlem 街区大规模破坏；Sterns 头部伤口接触血液，其后续状态在此阶段不公开、不擅自扩展。Banner 从 Ross 的直升机跃下变身，在街头击败 Abomination，阻止其继续杀戮后离开，Ross 收押 Blonsky。市民、警方和媒体能确认 Harlem 出现两名巨大生物及严重破坏，却不知道 Banner 实验全档、强化配方或神盾局计划。事后 Tony 曾接触 Ross 并提到正在组建的特殊团队，但这不表示 Ross 加入 Avengers。默认结局可被介入改变，不能为维持 2012 阵容强迫 Banner 存活或逃脱。",
+      "key": ["Hulk", "浩克", "Bruce Banner", "布鲁斯班纳", "Harlem", "哈莱姆", "Abomination", "憎恶", "Emil Blonsky", "Culver University", "Samuel Sterns"],
+      "keysecondary": [],
+      "order": 239,
+      "excludeRecursion": true,
+      "preventRecursion": true
+    },
+    "14": {
+      "comment": "Thor、New Mexico 与 Asgard 事件",
+      "content": "[MCU-THOR-NEW-MEXICO-2010]\nAsgard 是与地球有古老接触、拥有强大文明和真实魔法的九界势力。Thor 在加冕前因 Frost Giants 闯入宝库而违抗 Odin，带 Loki、Sif 和 Warriors Three 进攻 Jotunheim；Odin制止战争并将傲慢的 Thor 放逐到地球，剥夺其力量，把带有“值得者”条件的 Mjolnir 投向 New Mexico。Jane Foster、Erik Selvig 与 Darcy Lewis 在 Puente Antiguo 附近发现 Thor；当地人发现锤坑后，Coulson 的神盾局接管现场、扣留 Jane 的研究资料，Clint Barton 受命在高处待射。无资格者不能靠起重机或蛮力举起 Mjolnir。\nOdin 陷入 Odinsleep 后，Loki 掌权并得知自己的 Frost Giant 身世。他误导 Thor，以 Destroyer 赴地球对付 Thor 和 Asgard 同伴。Thor 为保护镇民甘愿牺牲，重新获得 Mjolnir 与力量，击败 Destroyer。回到 Asgard 后，他为阻止 Loki 用 Bifrost 毁灭 Jotunheim而摧毁彩虹桥；Loki在冲突末尾坠入虚空，Thor 与 Jane 暂时失去常规往来。New Mexico 有大量目击者、破坏与神盾局封锁，公众可获得碎片化的“锤子、装甲机器人、风暴”报道，却不会自动知道九界政治、Loki 身世或 Bifrost 原理。Thor不是漫画版履历的复制品；Asgard 科技、符文和魔法也不能被普通人凭 Destroyer 碎片立即复现。",
+      "key": ["Thor", "雷神", "New Mexico", "新墨西哥", "Puente Antiguo", "Mjolnir", "雷神之锤", "Asgard", "阿斯加德", "Loki", "Destroyer", "彩虹桥"],
+      "keysecondary": [],
+      "order": 239,
+      "excludeRecursion": true,
+      "preventRecursion": true
+    },
+    "15": {
+      "comment": "2011 年 Steve Rogers 苏醒",
+      "content": "[ERA_2011_CAP_AWAKE]\n1945 年 Steve Rogers 驾驶装载 HYDRA 武器的 Valkyrie 坠入北极并被冻结，外界长期认定 Captain America 已牺牲；Howard Stark 在搜寻中从海中回收 Tesseract，却未找到 Steve。2011 年神盾局找到保存完好的 Steve 并使其苏醒。Fury 为降低冲击，把他安置在仿造 1940 年代的房间内播放旧广播；Steve 从一场自己亲历过的棒球比赛识破布景，冲出设施来到现代 Times Square，Fury 才告知他已沉睡近七十年。\n此阶段重点是适应而非自动加入成熟团队：Steve 身体仍保持超级士兵能力和二战战斗经验，但不熟悉现代通信、法律、政治、神盾局结构及现役武器；Peggy Carter 已年老，Howling Commandos 的时代已经过去。神盾局掌握其医疗、住址与安全安排，普通公众是否以及何时获知“Captain America 生还”取决于后续公开活动，不能让全城在苏醒当天掌握细节。到 2012 年 Fury 才在 Tesseract 危机中正式召回 Steve。若 Steve 提前接触 HYDRA 渗透、Bucky 生还或 Howard 死亡真相，必须来自可验证证据并改变其关系线，不能只因周衡说出原作答案便立即接受。",
+      "key": ["ERA_2011_CAP_AWAKE", "Steve Rogers 苏醒", "美国队长苏醒", "北极发现", "Valkyrie", "时代广场苏醒", "Captain America 2011"],
+      "keysecondary": [],
+      "order": 243,
+      "excludeRecursion": true,
+      "preventRecursion": true
+    },
+    "16": {
+      "comment": "2012 年纽约入侵前危机",
+      "content": "[ERA_2012_PRE_INVASION]\nS.H.I.E.L.D. 与 Project P.E.G.A.S.U.S. 在联合暗能量设施研究 Tesseract。Loki 受 Thanos 阵营支持，经 Tesseract 开启的通道抵达设施，使用权杖控制 Clint Barton、Erik Selvig 等人并夺走 Tesseract；设施因能量失控坍塌。此时 Fury 知道敌人和能量源，却不知道 Thanos 的完整战略，公众只可能看到封锁、疏散或事故报道。World Security Council 倾向以武器化和命令链解决危机，Fury重新启动 Avengers Initiative。\nNatasha 在 Kolkata 招募 Banner，Coulson 联络 Tony 并取得他对 Tesseract 数据的分析，Fury召回 Steve。Loki 在 Stuttgart 公开制造袭击后被 Steve 与 Tony 捕获；Thor以 Asgardian 手段返回地球并试图带走 Loki，三人冲突后暂时合作。Loki被关进 Helicarrier，团队因神盾局利用 Tesseract 制造武器、权杖影响和彼此不信任而分裂。被控制的 Barton 带队袭击 Helicarrier，导致 Banner 变身、Thor坠离舰体、Barton被 Natasha 解控、Coulson 被 Loki 杀死，Loki逃往纽约。幸存成员在损失后自行决定集结，推断目标是以 Stark Tower 的清洁能源设施驱动门户。ERA_2012_PRE_INVASION 持续到纽约上空门户实际开启；任何提前夺回 Tesseract、阻止 Loki 或改变 Coulson 生死的行动都应重算后续，不得硬切纽约大战。",
+      "key": ["ERA_2012_PRE_INVASION", "Tesseract 被盗", "洛基入侵前", "Project PEGASUS", "Helicarrier 袭击", "Avengers 招募", "Stuttgart", "权杖控制", "Coulson 死亡"],
+      "keysecondary": [],
+      "order": 248,
+      "excludeRecursion": true,
+      "preventRecursion": true
+    },
+    "17": {
+      "comment": "2012 年 Battle of New York",
+      "content": "[ERA_2012_BATTLE_NY]\n默认战况起点是 Selvig 在 Stark Tower 顶部以 Tesseract 和不可自行关闭的能量屏障启动门户，Chitauri 步兵、战车与 Leviathans 进入 Midtown Manhattan。初始六名 Avengers 为 Iron Man、Captain America、Thor、Hulk、Black Widow 和 Hawkeye；他们不是早已磨合的常设军团。Steve 协调地面疏散与战术，Tony 负责高速拦截，Thor 与 Hulk 对付重型目标，Natasha 和 Clint 处理门户与火力节点。NYPD、消防、医疗和市民按可见战况行动，通信中断、道路堵塞、坠落物、误伤、弹药和救援时间均有真实后果。\nWorld Security Council 越过 Fury决定向 Manhattan 发射核弹；Fury反对并试图阻止起飞，但一架战机成功发射。Tony 把导弹带入门户，命中 Chitauri 母舰，使大量依赖其控制的部队失效；他在门户关闭前坠回地球。Natasha从 Selvig 得知可用 Loki 权杖穿透屏障，并以权杖关闭门户。Hulk制服 Loki，Thor随后把 Loki与 Tesseract 带回 Asgard。战斗造成明确人员伤亡、基础设施毁坏和全球影像传播，但不杜撰未经屏幕或后续剧情确认的精确伤亡数字。门户关闭、入侵军失效且主要战斗结束后进入 ERA_2012_POST_BATTLE；若核弹、母舰、权杖、Loki或门户状态被周衡改变，按物理与组织因果结算，不能强制复制胜利画面。",
+      "key": ["ERA_2012_BATTLE_NY", "Battle of New York", "纽约之战", "Chitauri", "齐塔瑞", "Stark Tower 门户", "Leviathan", "纽约核弹", "Avengers Assemble", "洛基权杖"],
+      "keysecondary": [],
+      "order": 250,
+      "excludeRecursion": true,
+      "preventRecursion": true
+    },
+    "18": {
+      "comment": "关键地点与公众认知升级",
+      "content": "[MCU-LOCATIONS-AWARENESS]\n地点必须与时代匹配。2008 年 Tony 线的关键区域是阿富汗伏击路线与洞穴营地、Yinsen 的 Gulmira、California 的 Malibu 宅邸工坊、Stark Industries 设施及 Edwards Air Force Base；纽约尚无 Tony 专属高塔。2010 年三线分别落在 Monaco 赛道与 Queens 的 Flushing Meadows-Corona Park Stark Expo、Virginia 的 Culver University 与 New York Harlem、New Mexico 的 Puente Antiguo 和 Mjolnir 坑。2011 年 Steve 的现代苏醒点通向 Times Square。2012 年 Project P.E.G.A.S.U.S. 设施、Helicarrier、Midtown 的 Stark Tower 与 Grand Central 周边构成入侵主轴；177A Bleecker Street 的 New York Sanctum 同在 Manhattan，但不自动卷入 Avengers 指挥链。\n认知分四层记录。公开层来自记者会、听证、电视直播和大规模目击：2008 年后公众知道 Tony 是 Iron Man；2010 年后知道 Expo 武装无人机事故、Harlem 两名巨人和 New Mexico 异常的可见部分；2012 年后全球确认 Avengers、Loki、Thor、Hulk与外星入侵。目击层包含当地幸存者看到但未被机构证实的细节。机构层包含军方、神盾局、Stark与政府按权限掌握的档案。绝密层包含 HYDRA、Wenwu、Wakanda、Red Room、Kamar-Taj、Thanos及 Infinity Stones 真相。Battle 后政府与 Stark参与清理，Department of Damage Control 接管合同，Chitauri 残骸进入管制和黑市风险；普通人仍不能因此识别每件外星器物或获得神盾局数据库。",
+      "key": ["MCU关键地点", "公众认知", "超级英雄公开程度", "Malibu 工坊", "Flushing Meadows", "Puente Antiguo", "Culver University", "Times Square", "Stark Tower", "Grand Central", "Damage Control", "外星残骸"],
+      "keysecondary": [],
+      "order": 226,
+      "excludeRecursion": true,
+      "preventRecursion": true
+    },
+    "19": {
+      "comment": "时代标记、默认未来与分歧演算规则",
+      "content": "[MCU-ERA-STATE-MACHINE]\n主连续性只设置一个当前主时代标记，必要时另记局部事件状态。固定顺序与切换条件为：ERA_2008_CAPTIVITY，从开局持续到 Tony 实际逃离囚禁；逃离后沿 2008 归国线推进，身份实际公开后为 ERA_2008_POST_REVEAL；进入三线重叠窗口后为 ERA_2010_BIG_WEEK；Steve 在现代实际苏醒后为 ERA_2011_CAP_AWAKE；Loki 经 Tesseract 抵达且纽约门户未开时为 ERA_2012_PRE_INVASION；门户实际开启并形成 Chitauri 战区时为 ERA_2012_BATTLE_NY；门户关闭且主要战斗结算后为 ERA_2012_POST_BATTLE。年份标签服务于检索，屏幕未锁死的日、小时不擅自精确化。\n默认未来只在相关节点尚未被改变时成立：Tony 自救、关闭武器部门、击败 Stane并公开身份；2010 年 Expo、Harlem、New Mexico 三线按各自原作推进；2011 年 Steve 苏醒；2012 年 Loki危机促成 Avengers并以门户关闭结束。每次实质介入后记录人物生死与伤势、当前位置、关系、公开身份、组织知识、关键物品所有权、设施状态和可用资源，再从这些事实演算。Tony死亡或未公开就不能照搬 Iron Man 2；Tesseract 易主或 Loki提前被控制就不能硬开门户；某人未被招募就不能无解释出现在六人阵容。NPC 不知道“时代标记”且不会配合预定剧情。允许永久偏离，但重大新事件必须来自 Marvel 原作或已记录分歧的可追溯后果，不以巧合生成替补反派，不动态提高敌人强度追赶周衡，也不因玩家避开事件而让世界停滞。",
+      "key": ["时代标记", "MCU时代切换", "ERA_2008_CAPTIVITY", "ERA_2008_POST_REVEAL", "ERA_2010_BIG_WEEK", "ERA_2011_CAP_AWAKE", "ERA_2012_PRE_INVASION", "ERA_2012_BATTLE_NY", "ERA_2012_POST_BATTLE", "剧情分歧", "默认未来", "连续性演算"],
+      "keysecondary": [],
+      "order": 252,
+      "excludeRecursion": true,
+      "preventRecursion": true
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "packageVersion": "1.0.0",
+  "runtimeLorebookName": "zhou-heng-marvel-system-worldbook",
+  "output": "zhou-heng-marvel-system-worldbook.json",
+  "outputEntries": 78,
+  "outputSha256": "b5fbfa575dedf61416a388e6ee9a2b35086d0f10bdf4ee2961d4dd5d79fec7fb",
+  "installArtifacts": [
+    {
+      "file": "README.md",
+      "sha256": "cad8ec1ff7d3296641fedb1658a1dd61e0294f2bfc8cb2313a60b8ec245a4225"
+    },
+    {
+      "file": "zhou-heng-marvel-system.character.json",
+      "sha256": "6c218bfa05c8efc295a52d79e715c1c2b396ebedf4bb8e2634a45643e862a25d"
+    },
+    {
+      "file": "zhou-heng-marvel-system-worldbook.json",
+      "sha256": "b5fbfa575dedf61416a388e6ee9a2b35086d0f10bdf4ee2961d4dd5d79fec7fb"
+    },
+    {
+      "file": "zhou-heng-marvel-system-quick-replies.json",
+      "sha256": "b295d44b5f0091021d765738ece7fd01ec740c492b55ffa01318abae9a728201"
+    },
+    {
+      "file": "zhou-heng-persona.md",
+      "sha256": "d8c1e2a81373470549ff2837802ff15df082fa8ede376e6ea6df3ece3a828122"
+    }
+  ],
+  "sources": [
+    {
+      "file": "archive/development/sources/zhou-heng-marvel-system-core-lorebook.json",
+      "entries": 8,
+      "category": "core",
+      "sha256": "894d171c480f012428453d885af8d89a1ac08931059873ff781e6c37ccc7582b"
+    },
+    {
+      "file": "archive/development/sources/zhou-heng-marvel-system-cast-lorebook.json",
+      "entries": 10,
+      "category": "cast",
+      "sha256": "85092ba8bdbdee45afddf76c7a30888c8887abce1d45f941ba64c4adb25abfc9"
+    },
+    {
+      "file": "archive/development/sources/zhou-heng-marvel-system-system-lorebook.json",
+      "entries": 18,
+      "category": "system",
+      "sha256": "7db8ca85fb59d7a41ddac6dbc3ef865e6f13c6eca0c4eae6298e3eefdcd61fde"
+    },
+    {
+      "file": "archive/development/sources/zhou-heng-marvel-system-mcu-lorebook.json",
+      "entries": 20,
+      "category": "mcu",
+      "sha256": "0f73771f98659c9c046f0fda29f1876841f3870d47c1f1cb7747fba24f56cbbc"
+    },
+    {
+      "file": "archive/development/sources/zhou-heng-marvel-system-comics-lorebook.json",
+      "entries": 10,
+      "category": "comics",
+      "sha256": "16723f64f9d8363076a047e9057f6a4355090d8a933ccc9acee2517052a313ee"
+    },
+    {
+      "file": "archive/development/sources/zhou-heng-marvel-system-missions-lorebook.json",
+      "entries": 6,
+      "category": "mission-archive",
+      "sha256": "cf6adafb93d49cf3992020649e5e0de74882939cc1c23879c94e1659b7d32daf"
+    },
+    {
+      "file": "archive/development/sources/zhou-heng-marvel-system-stages-lorebook.json",
+      "entries": 6,
+      "category": "story-stage",
+      "sha256": "8e6d6f5a63b3a49223a7b0a54f0263d155b1ccc4244a5725f6d99abb739ff001"
+    }
+  ]
+}

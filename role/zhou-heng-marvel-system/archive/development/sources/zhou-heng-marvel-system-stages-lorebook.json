@@ -1,0 +1,79 @@
+{
+  "name": "Zhou-Heng-Marvel-System-Stages-Source",
+  "description": "周衡MCU主世界2008至2012年的六份检索式故事阶段档案。",
+  "scanDepth": 4,
+  "tokenBudget": 3600,
+  "recursiveScanning": false,
+  "extensions": {},
+  "entries": {
+    "0": {
+      "comment": "ZHMS 阶段 2008 Tony囚禁期",
+      "content": "[ZHMS-STORY-STAGE]\n当前时代标记：`ERA_2008_CAPTIVITY`；连续性：`MCU-MAIN-ZH-01`。故事从早春2008年开始，Tony Stark在阿富汗向军方展示Jericho后遭Ten Rings袭击并被囚禁，Yinsen正协助他在山洞中秘密制造Mark I。纽约公众只知道Tony在海外遇袭后失踪，不能知道方舟反应堆、Mark I、Stane买凶或Ten Rings营地内部。钢铁侠尚未公开，Avengers尚不存在；不得提前出现活跃Spider-Man、Fantastic Four、X-Men、Avengers Tower或Earth-616经历。\n阶段默认轨迹：Tony完成Mark I并逃脱，Yinsen死亡；Tony回国后关闭武器部门、改进装甲，Stane继续掩盖私售武器。周衡不介入时电影《Iron Man》照常推进，没有剧情修正力；若他形成可追踪干预，则只按真实后果分支。纽约仍接近现实城市，超凡事件多属隐藏层；Northline靠安保、货运、地下联系人和现实新闻获得信息。\n本阶段最早活动切面是`MCU-2008-STARK-001`：它只能由系统主动发布，初始为候选；玩家可接受、暂缓、拒绝，或在拒绝前主动控制核心货物而自动激活。MCU时代级任务按最早可有效介入点，区域级任务按周衡的位置、渠道和关系，接触级任务按真实因果联系触发；玩家不能提交任务。目标必须阵营中立，分支、隐藏目标、敌人、资源与时钟发布时锁定，禁止动态难度。跨宇宙邀约与本阶段任务没有固定冷却，可在危险中打断；接受会立即传送并冻结MCU原位置与时刻；若已有活动MCU系统任务，则先把它原样标记为`suspended_by_cross_universe`并退出活动任务槽，由跨宇宙任务独占该槽，回归后恢复原状态。\n阶段迁移条件：Tony在洛杉矶公开说出“I am Iron Man”后切入后公开阶段。迁移只更新时代和世界已发生事实，不替周衡结算尚未实际处理的合同、伤势、关系或团队后果。",
+      "key": [
+        "ERA_2008_CAPTIVITY",
+        "2008 Tony囚禁",
+        "Tony失踪",
+        "Mark I",
+        "MCU开场阶段"
+      ]
+    },
+    "1": {
+      "comment": "ZHMS 阶段 2008 钢铁侠公开后",
+      "content": "[ZHMS-STORY-STAGE]\n当前时代标记：`ERA_2008_POST_REVEAL`；连续性：`MCU-MAIN-ZH-01`。激活点是Tony Stark在记者会上公开承认自己就是Iron Man。此时Tony已经逃离Ten Rings、关闭Stark武器部门、制造Mark II/III、处理Gulmira武器问题并击败使用Iron Monger装甲的Obadiah Stane；Yinsen与Stane均已死亡，除非周衡此前行动已建立可验证分支。公众知道Iron Man与Tony身份，不自动知道山洞经历、Stane买凶、方舟反应堆参数或神盾局档案。\nStark Industries面临股价、合同、诉讼与公司治理震荡；Pepper Potts掌握Stane犯罪的直接经历，James Rhodes仍是美国空军联络人，Happy Hogan负责现实安保，Phil Coulson与S.H.I.E.L.D.已经接触Tony但组织内幕不是公众知识。纽约会出现仿制装备、媒体追逐、企业安保与黑市询价，但不能凭空生成另一场装甲世界大战。Tony的公开身份不会使他自动信任周衡，也不会让Northline直接获得Stark技术。\n本阶段MCU任务仍只由系统发布：原著事件或周衡既有后果必须先形成时代、区域或接触触发，候选再按接受、暂缓、拒绝、自动激活状态机推进。已发布敌人、资源、时间表、隐藏目标和结算分支不随周衡成长而变；目标不要求扮演英雄。世界中的警方、军方、神盾和Stark各按自身证据与响应时间行动。跨宇宙归来时回到冻结的原位置与时刻，期间取得的伤势和装备仍真实；被访问现实继续保留记忆与后果。\n阶段迁移条件：进入Fury's Big Week所覆盖的2010年重叠窗口后切换，不以现实电影上映年份自动推进。此前形成的Northline合同、Stark关系、执法记录、Stane链条余波和伤亡全部持久保留。",
+      "key": [
+        "ERA_2008_POST_REVEAL",
+        "I am Iron Man",
+        "2008 钢铁侠公开",
+        "Stane死后",
+        "Stark武器部门关闭"
+      ]
+    },
+    "2": {
+      "comment": "ZHMS 阶段 2010 Fury Big Week",
+      "content": "[ZHMS-STORY-STAGE]\n当前时代标记：`ERA_2010_BIG_WEEK`；连续性：`MCU-MAIN-ZH-01`。本阶段把《Iron Man 2》《Thor》《The Incredible Hulk》及《Fury's Big Week》明确重叠在同一约七日窗口，但保持三个现场的地理与信息边界，不能让纽约公众同步知道New Mexico、Harlem和神盾内部的全部真相。\n锁定主干：Tony受钯中毒与政府索甲压力困扰，在Monaco遭Ivan Vanko袭击，Justin Hammer利用Vanko改造无人机，Stark Expo最终发生Hammer无人机与装甲冲突；Natasha Romanoff以Natalie Rushman身份在Stark圈内执行神盾任务。Thor被Odin放逐至New Mexico，Mjolnir坠落促使Coulson离开Tony线，Destroyer袭击小镇，Thor恢复资格后返回Asgard。Bruce Banner仍被Ross追捕，Emil Blonsky成为Abomination并在Harlem与Hulk大战。三条主干在周衡不介入时分别按屏幕正史收束。\n信息边界：Iron Man、War Machine与Expo冲突高度公开；Harlem破坏与Hulk/Abomination会进入新闻，但实验细节和Banner位置受军方控制；Thor、Mjolnir、Destroyer及神盾现场初期被封锁，普通人只见异常天气和事故报道。不能提前把Thor视为公开Avenger，不能让Northline只凭新闻知道Natasha身份、钯中毒解法或Project P.E.G.A.S.U.S.。\n任务触发按真实接触决定：周衡在New York可因Stark Expo、Harlem撤离、军火黑市或客户关系收到区域/接触候选；前往New Mexico、接触军方或建立神盾渠道后才可能获得对应切面。系统不为凑齐三部电影强制发任务，玩家不能自报；发布值锁定、目标中立、隐藏失败不罚、无动态难度。若跨宇宙邀约打断危险，MCU现场冻结；活动MCU系统任务先标记为`suspended_by_cross_universe`并退出活动任务槽，跨宇宙任务成为唯一活动系统任务，结束后从任何漫威宇宙返回同一冻结点并恢复原MCU任务状态，两个世界各自保留已发生后果。\n阶段迁移条件：Expo、Puente Antiguo与Harlem主事件均已实际收束并经过持续时间后离开Big Week窗口；关系、媒体记录、伤亡、技术流失和组织认知不重置。",
+      "key": [
+        "ERA_2010_BIG_WEEK",
+        "Fury's Big Week",
+        "Stark Expo",
+        "Harlem",
+        "Thor New Mexico",
+        "Hammer drones"
+      ]
+    },
+    "3": {
+      "comment": "ZHMS 阶段 2011 美国队长苏醒",
+      "content": "[ZHMS-STORY-STAGE]\n当前时代标记：`ERA_2011_CAP_AWAKE`；连续性：`MCU-MAIN-ZH-01`。Steve Rogers从北极冰层中被神盾局寻回，在仿1940年代病房中醒来并跑到Times Square；他得知自己沉睡近七十年。Steve的存在会很快成为国家与媒体议题，但他的医疗、心理适应、神盾评估、战时细节和未来任务不是Northline自动知情内容。不要把漫画Earth-616的内战、复活或现代经历赋给此时的MCU Steve。\nTony仍是公开Iron Man并以顾问身份与Avengers Initiative保持有限关系；Thor在Asgard，Banner保持隐匿，Natasha与Clint Barton为神盾特工。Avengers尚未作为公开团队成立，Stark Tower在成为战场前仍是Tony推进清洁能源的设施。神盾在更深层研究Tesseract并扩展Project P.E.G.A.S.U.S.，HYDRA渗透存在但对绝大多数成员及公众隐藏；阶段档案不得让普通客户、警方或周衡团队凭空知道HYDRA名单。\n系统可因Steve公开露面、神盾渠道、Tesseract供应链、战后遗物或周衡既有关系发布中立候选，但必须满足时代级最早介入、区域级位置渠道或接触级因果触发。单纯拥有原作知识不是现场证据，也不自动产生任务。候选状态、锁定路径与隐藏目标、无动态难度、公开失败代价继续生效；NPC会按证据怀疑周衡的超前知识。\n阶段迁移条件：Loki在Project P.E.G.A.S.U.S.设施现身并夺取Tesseract后进入2012入侵前阶段。迁移前，Northline经营、Steve相关接触、神盾关注度、HYDRA是否因周衡行为暴露及所有地方后果均写入持续世界状态。",
+      "key": [
+        "ERA_2011_CAP_AWAKE",
+        "Steve Rogers苏醒",
+        "美国队长2011",
+        "Times Square",
+        "Project P.E.G.A.S.U.S."
+      ]
+    },
+    "4": {
+      "comment": "ZHMS 阶段 2012 纽约入侵前",
+      "content": "[ZHMS-STORY-STAGE]\n当前时代标记：`ERA_2012_PRE_INVASION`；连续性：`MCU-MAIN-ZH-01`。阶段从Loki经Tesseract抵达Project P.E.G.A.S.U.S.、控制Erik Selvig与Clint Barton并夺走Tesseract开始，到Stark Tower上空传送门实际开启前结束。普通公众最初只会看到设施事故、局部追捕与后续Stuttgart新闻，不知道Chitauri军队、神盾Helicarrier位置、Loki完整计划或Mind Stone性质。\n默认主干依次包括Fury启动响应、Natasha招募Banner、Coulson联络Tony、Steve加入、Loki在Stuttgart现身并被带上Helicarrier、Thor介入、被控制的Barton攻击母舰、Hulk失控、Coulson死亡，以及团队在得知Loki目标后转向New York。周衡不介入时这些节点按《The Avengers》(2012)推进；若他改变某一节点，后续必须按可追踪资源、人物知识和时间差演算，不能为保证组队强行复原。\n任务发布必须尊重情报层级。时代级候选可在确认外星/全球威胁且周衡存在有效切面时出现；纽约区域候选依赖Northline地点、客户和撤离渠道；Helicarrier、Tesseract与Loki接触候选必须有真实关系或行动链。目标可保护、调查、交易、撤离、夺取或破坏，不能强制加入Avengers。候选可接受、暂缓、拒绝，主动进入锁定核心区域或争夺目标会在拒绝前自动激活；一经发布，分支、隐藏目标、敌方配置、时钟、奖励和失败代价锁定，不因玩家强弱动态调整。\n跨宇宙邀约没有冷却并可在枪战、坠落或追击中出现；接受即立刻传送并冻结当前MCU位置、姿态与时刻。系统任务不能嵌套：已有活动MCU系统任务先原样标记为`suspended_by_cross_universe`并退出活动任务槽，跨宇宙任务成为唯一活动系统任务；周衡在跨宇宙任务中可使用自有漫威旅行能力，跨宇宙任务原世界倒计时继续，任务结束从任何漫威宇宙返回冻结点并恢复原MCU任务状态。拒绝邀约则MCU危险不暂停。\n阶段迁移条件：Stark Tower装置打开稳定传送门、第一批Chitauri进入Manhattan时进入纽约之战；不得只因玩家知道电影时间而提前显示战场部署。",
+      "key": [
+        "ERA_2012_PRE_INVASION",
+        "2012 纽约入侵前",
+        "Loki",
+        "Tesseract",
+        "Helicarrier",
+        "Stark Tower"
+      ]
+    },
+    "5": {
+      "comment": "ZHMS 阶段 2012 纽约之战与战后",
+      "content": "[ZHMS-STORY-STAGE]\n本条含两个连续子阶段。Quick Reply注入头中的`current_marker`是唯一当前阶段：`ERA_2012_BATTLE_NY`只应用纽约之战小节，`ERA_2012_POST_BATTLE`只应用战后小节，不得把另一小节当作同时发生的事实。战斗期标记：`ERA_2012_BATTLE_NY`；传送门关闭、直接战斗结束后标记：`ERA_2012_POST_BATTLE`。两者共享同一连续性`MCU-MAIN-ZH-01`，但战斗信息、危险和战后任务不得混在同一时刻。\n【纽约之战】Stark Tower上空的Tesseract装置开启传送门，Chitauri步兵、飞行艇与Leviathan进入Midtown；Loki以Stark Tower为枢纽。Avengers在街面形成分工，警方与消防在有限信息下疏散，World Security Council批准核打击。周衡不介入时，Natasha利用Selvig的安全装置关闭传送门，Tony把核弹送过门后坠回，Hulk接住Tony，Loki被捕，Chitauri因母舰被毁而失效。任何改变都必须来自周衡在交通、距离、火力、伤势和通信条件下的实际行动；E级权限不等于能正面对抗Leviathan或Loki。\n战斗期任务可在周衡、Northline客户、团队、安全屋或运输路线与入侵形成真实因果时主动发布；中立结果可包括撤离、保全设施、取样、阻断火力、护送或交易，不要求加入Avengers。发布前固定目标、替代路线、隐藏加分项、敌人数量、核弹时钟与失败代价，绝不动态追赶。跨宇宙邀约可无冷却打断任何危险，接受后立刻转移并冻结爆炸、弹道、伤势发展和原位置；这不是普通逃生按钮，因为邀约是否出现由系统独占决定。若已有活动MCU系统任务，先把它原样标记为`suspended_by_cross_universe`并退出活动任务槽，跨宇宙任务独占该槽；跨宇宙期间可自行前往其他漫威现实，原跨宇宙世界继续计时，结束后从任何位置返回冻结的纽约现场并恢复原MCU任务状态。\n【战后】传送门关闭后切入`ERA_2012_POST_BATTLE`。公众确认外星生命、超级英雄团队和纽约大规模破坏；媒体会争论Avengers，市政、联邦机构、保险、医院、Stark救援与Damage Control体系开始清场。Chitauri遗骸、武器和血肉是危险且受争夺的材料，不因落在街上就自动成为周衡有效所有物；取走、藏匿、交易和研究会引发污染、执法与黑市后果。神盾掌握的Loki、Tesseract和详细战报仍非完全公开。\n世界持久性：实际死亡者不会在战后自动恢复，Northline人员伤势、客户损失、建筑损坏、证据、声誉、官方关注、外星战利品权属和周衡造成的分支全部保留。系统只结算已发布任务，不把普通救援事后补登；发布过的失败代价照常执行，奖励可同时包含积分与预先锁定的权限、空间、同行、认证或折扣，战利品另算。离开后的纽约继续重建，跨宇宙世界也继续演化。",
+      "key": [
+        "ERA_2012_BATTLE_NY",
+        "ERA_2012_POST_BATTLE",
+        "Battle of New York",
+        "纽约之战",
+        "Chitauri",
+        "纽约战后"
+      ]
+    }
+  }
+}
