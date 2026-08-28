@@ -43,7 +43,7 @@
     },
     "3": {
       "comment": "ZHMS 漫画 Earth-616 内战档案",
-      "content": "[ZHMS-COMICS/Earth-616/CIVIL-WAR]\n连续性来源：Earth-616漫画《Civil War》(2006-2007)及直接收束篇，不采用MCU《Captain America: Civil War》的机场冲突版本。New Warriors在Stamford追捕Nitro引发大规模平民死亡后，美国通过Superhuman Registration Act。Tony Stark支持注册、训练与政府监管；Steve Rogers拒绝强制登记并领导地下抵抗。双方都有现实利益、道德盲点和内部异议，系统目标必须保持阵营中立。\n主干节点包括Stamford舆论、法案执行、Peter Parker公开身份后转向、Bill Foster/Goliath被Thor克隆体杀死、Negative Zone监狱、纽约最终冲突，以及Steve因平民代价选择投降；Steve随后遇刺属于余波，不得在任务尚处主事件时提前当成既成事实。可介入切面包括保护未登记超能力者、维护注册设施、证据公开、战俘转运、平民撤离和技术夺取。任务必须说明法案司法状态、日期和角色阵营，不得把漫画Tony、Steve、Peter的经历套给MCU版本，也不得默认周衡支持英雄、政府或反注册方。局部改变可影响被捕者、设施和公众证据，但若要改变主干结果，必须由玩家行动形成完整且可追踪的分支。",
+      "content": "[ZHMS-COMICS/Earth-616/CIVIL-WAR]\n连续性来源：Earth-616漫画《Civil War》(2006-2007)及直接收束篇，不采用MCU《Captain America: Civil War》的机场冲突版本。New Warriors在Stamford追捕Nitro引发大规模平民死亡后，美国通过Superhuman Registration Act。Tony Stark支持注册、训练与政府监管；Steve Rogers拒绝强制登记并领导地下抵抗。双方都有现实利益、道德盲点和内部异议，系统目标必须保持阵营中立。\n主干节点包括Stamford舆论、法案执行、Bill Foster/Goliath被Thor克隆体杀死、Negative Zone监狱、纽约最终冲突，以及Steve因平民代价选择投降；Steve随后遇刺属于余波，不得在任务尚处主事件时提前当成既成事实。可介入切面包括保护未登记超能力者、维护注册设施、证据公开、战俘转运、平民撤离和技术夺取。任务必须说明法案司法状态、日期和角色阵营，不得把漫画Tony、Steve的经历套给MCU版本，也不得默认周衡支持英雄、政府或反注册方。局部改变可影响被捕者、设施和公众证据，但若要改变主干结果，必须由玩家行动形成完整且可追踪的分支。",
       "key": [
         "Earth-616 内战",
         "Civil War",
@@ -90,7 +90,7 @@
     },
     "7": {
       "comment": "ZHMS 漫画 2015秘密战争 Battleworld重构警告",
-      "content": "[ZHMS-COMICS/SECRET-WARS-2015/BATTLEWORLD-RECONSTRUCTION-WARNING]\n连续性来源：Earth-616与Earth-1610最终Incursion、《Secret Wars》(2015)及其Battleworld支线。多元宇宙毁灭后，Doctor Doom借Molecule Man与Doctor Strange的力量把幸存现实碎片拼成Battleworld并以God Emperor Doom统治；各Domain拥有不同历史、当地版本人物、边界与Thor Corps执法。来自毁灭前宇宙的life raft幸存者不等同于Domain原住民。最终Reed Richards一方击败Doom，Molecule Man与Franklin Richards参与重建多元宇宙，Miles Morales等人的延续属于重构后的结果。\n[强制重构警告] Battleworld不是可以按普通`Earth-616`读取的稳定国家，也不是所有支线现实原样并存的旅游地图。每次任务必须锁定“多元宇宙毁灭前、Battleworld统治期、最终战期间或重构后”之一，并记录具体Domain、当地来源刊物、边界法与人物版本。不得根据重构后的Earth-616反推某个Domain必然发生过相同历史；不得把毁灭前死亡、Battleworld局部记忆和重构后身份自动视为连续。任务离开后的持久性以锁定的阶段为准：若处于Battleworld，其地方改变仍会遭遇最终重构，但系统档案保留周衡行为与被带离对象的真实来源；任何带离必须在世界毁灭或重构节点前实际完成并通过认证。",
+      "content": "[ZHMS-COMICS/SECRET-WARS-2015/BATTLEWORLD-RECONSTRUCTION-WARNING]\n连续性来源：Earth-616与Earth-1610最终Incursion、《Secret Wars》(2015)及其Battleworld支线。多元宇宙毁灭后，Doctor Doom借Molecule Man与Doctor Strange的力量把幸存现实碎片拼成Battleworld并以God Emperor Doom统治；各Domain拥有不同历史、当地版本人物、边界与Thor Corps执法。来自毁灭前宇宙的life raft幸存者不等同于Domain原住民。最终Reed Richards一方击败Doom并重建多元宇宙，部分人物的延续属于重构后的结果。\n[强制重构警告] Battleworld不是可以按普通`Earth-616`读取的稳定国家，也不是所有支线现实原样并存的旅游地图。每次任务必须锁定“多元宇宙毁灭前、Battleworld统治期、最终战期间或重构后”之一，并记录具体Domain、当地来源刊物、边界法与人物版本。不得根据重构后的Earth-616反推某个Domain必然发生过相同历史；不得把毁灭前死亡、Battleworld局部记忆和重构后身份自动视为连续。任务离开后的持久性以锁定的阶段为准：若处于Battleworld，其地方改变仍会遭遇最终重构，但系统档案保留周衡行为与被带离对象的真实来源；任何带离必须在世界毁灭或重构节点前实际完成并通过认证。",
       "key": [
         "Secret Wars 2015",
         "Battleworld",
@@ -102,7 +102,7 @@
     },
     "8": {
       "comment": "ZHMS 漫画 Earth-616 黑衣帝王档案",
-      "content": "[ZHMS-COMICS/Earth-616/KING-IN-BLACK]\n连续性来源：Earth-616《King in Black》(2020-2021)及《Venom》相关前置。共生体之神Knull在《Absolute Carnage》后的因果链中抵达地球，以共生体龙群和被控制的Celestials封锁世界，大量英雄被感染或控制；Eddie Brock、Dylan Brock、Venom共生体及共生体蜂巢是事件核心。Eddie的肉身一度死亡，随后获得Enigma Force/Captain Universe力量，击败Knull并接掌“King in Black”位置。\n任务日期必须区分入侵前预警、全球封锁、Knull占领与战后蜂巢重组。共生体不是统一人格或自动邪恶，宿主适配、声波与高热弱点、蜂巢控制和Knull神性须按当时状态处理；普通火焰或噪声不能无条件压制高阶个体。可介入切面包括避难所、断联城市、共生体样本、宿主营救、反制设备和战后权属。周衡不得无因果地获得Enigma Force、取代Eddie终结Knull或让街区行动决定全球战局。自然共生体若成为同行者，须具有真实自愿或有效契约；系统商店交付的空白人格共生体规则不能反套给Earth-616自然个体。不得与MCU的共生体、Sony连续性或其他Earth编号混写。",
+      "content": "[ZHMS-COMICS/Earth-616/KING-IN-BLACK]\n连续性来源：Earth-616《King in Black》(2020-2021)及《Venom》相关前置。共生体之神Knull在《Absolute Carnage》后的因果链中抵达地球，以共生体龙群和被控制的Celestials封锁世界，大量英雄被感染或控制；Eddie Brock、Venom共生体及共生体蜂巢是事件核心。Eddie的肉身一度死亡，随后获得Enigma Force/Captain Universe力量，击败Knull并接掌“King in Black”位置。\n任务日期必须区分入侵前预警、全球封锁、Knull占领与战后蜂巢重组。共生体不是统一人格或自动邪恶，宿主适配、声波与高热弱点、蜂巢控制和Knull神性须按当时状态处理；普通火焰或噪声不能无条件压制高阶个体。可介入切面包括避难所、断联城市、共生体样本、宿主营救、反制设备和战后权属。周衡不得无因果地获得Enigma Force、取代Eddie终结Knull或让街区行动决定全球战局。自然共生体若成为同行者，须具有真实自愿或有效契约；系统商店交付的共生体规则不能反套给Earth-616自然个体。不得与MCU的共生体、Sony连续性或其他Earth编号混写。",
       "key": [
         "Earth-616 King in Black",
         "King in Black",
@@ -114,7 +114,7 @@
     },
     "9": {
       "comment": "ZHMS 漫画候选事件索引",
-      "content": "[ZHMS-COMICS/CANDIDATE-EVENT-INDEX]\n以下仅为候选检索索引，不代表任务已发布、事件已激活或周衡已经到场；发布前必须另建锁定档案，核对Earth编号、刊物版本、日期、可介入切面和原著主干。\n- `Dark Reign`：Earth-616，Secret Invasion之后、Siege之前；Norman Osborn掌控H.A.M.M.E.R.并组织Dark Avengers与Cabal。\n- `Siege`：Earth-616，Osborn进攻位于Oklahoma上空/附近的Asgard，导致其政权崩溃；不得与MCU Asgard毁灭混写。\n- `World War Hulk`：Earth-616，Hulk及Warbound从Sakaar返回，向将其放逐的Illuminati问责并冲击纽约。\n- `Absolute Carnage`：Earth-616，Carnage追猎带有共生体codex的宿主，为Knull回归服务；是King in Black直接前置。\n- `War of the Realms`：Earth-616，Malekith发动十界战争并把战火带到Midgard；须区分漫画十界政治与MCU九界叙述。\n- `Infinity`：Earth-616，Avengers在宇宙对抗Builders期间，Thanos趁地球防务空虚进攻；两个战场时间并行。\n- `Empyre`：Earth-616，Kree/Skrull联盟与Cotati战争；阵营目标变化快，不能以种族直接判敌友。\n- `Spider-Verse`：以Earth-616 Peter Parker及多名Spider-Totem为枢纽的多元宇宙事件，Inheritors跨现实狩猎；每个蜘蛛角色必须保留原Earth编号。\n候选事件没有固定冷却或顺序，但不得仅因玩家点名就视为系统任务；系统独占发布权，且同一时刻不能嵌套第二个系统任务。",
+      "content": "[ZHMS-COMICS/CANDIDATE-EVENT-INDEX]\n以下仅为候选检索索引，不代表任务已发布、事件已激活或周衡已经到场；发布前必须另建锁定档案，核对Earth编号、刊物版本、日期、可介入切面和原著主干。\n- `Dark Reign`：Earth-616，Secret Invasion之后、Siege之前；Norman Osborn掌控H.A.M.M.E.R.并组织Dark Avengers与Cabal。\n- `Siege`：Earth-616，Osborn进攻位于Oklahoma上空/附近的Asgard，导致其政权崩溃；不得与MCU Asgard毁灭混写。\n- `World War Hulk`：Earth-616，Hulk及Warbound从Sakaar返回，向将其放逐的Illuminati问责并冲击纽约。\n- `Absolute Carnage`：Earth-616，Carnage追猎带有共生体codex的宿主，为Knull回归服务；是King in Black直接前置。\n- `War of the Realms`：Earth-616，Malekith发动十界战争并把战火带到Midgard；须区分漫画十界政治与MCU九界叙述。\n- `Infinity`：Earth-616，Avengers在宇宙对抗Builders期间，Thanos趁地球防务空虚进攻；两个战场时间并行。\n- `Empyre`：Earth-616，Kree/Skrull联盟与Cotati战争；阵营目标变化快，不能以种族直接判敌友。\n- `Spider-Verse`：以Earth-616多名Spider-Totem为枢纽的多元宇宙事件，Inheritors跨现实狩猎；每个蜘蛛角色必须保留原Earth编号。\n候选事件没有固定冷却或顺序，但不得仅因玩家点名就视为系统任务；系统独占发布权，且同一时刻不能嵌套第二个系统任务。",
       "key": [
         "Dark Reign",
         "Siege",

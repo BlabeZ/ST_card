@@ -12,6 +12,7 @@ QUICK_REPLIES_PATH = (
     PACKAGE_ROOT / "boundless-private-collection-random.quick-replies.json"
 )
 README_PATH = PACKAGE_ROOT / "README.md"
+INSTALL_ROOT = PACKAGE_ROOT / "boundless-private-collection"
 
 
 def load_json(path: Path):
@@ -51,14 +52,32 @@ class PackageContractTest(unittest.TestCase):
         self.assertIn("原创副本", combined)
         self.assertIn("收藏", combined)
 
-    def test_every_collectible_target_is_globally_adult(self):
+    def test_constant_worldbook_preserves_player_agency(self):
         constant_text = "\n".join(
             entry["content"]
             for entry in self.worldbook["entries"].values()
             if entry["constant"]
         )
-        self.assertIn("所有可征服、收集、改造或调教的目标", constant_text)
-        self.assertIn("未成年人只能作为非目标背景人物", constant_text)
+        self.assertIn("不得替{{user}}说话、行动、选择", constant_text)
+        self.assertIn("只在需要{{user}}作出实质决定时停下", constant_text)
+
+    def test_nested_install_copies_match_release_sources(self):
+        pairs = (
+            (CHARACTER_PATH, INSTALL_ROOT / CHARACTER_PATH.name),
+            (WORLDBOOK_PATH, INSTALL_ROOT / WORLDBOOK_PATH.name),
+            (QUICK_REPLIES_PATH, INSTALL_ROOT / QUICK_REPLIES_PATH.name),
+        )
+        for source, install_copy in pairs:
+            self.assertEqual(source.read_bytes(), install_copy.read_bytes())
+
+    def test_art_archives_are_not_bundled(self):
+        paths = (
+            PACKAGE_ROOT / "user.jpg",
+            PACKAGE_ROOT / "boundless-private-collection.character.png",
+            INSTALL_ROOT / "boundless-private-collection.character.png",
+            PACKAGE_ROOT / "boundless-private-collection.zip",
+        )
+        self.assertTrue(all(not path.exists() for path in paths))
 
     def test_only_two_compact_worldbook_entries_are_constant(self):
         entries = self.worldbook["entries"].values()

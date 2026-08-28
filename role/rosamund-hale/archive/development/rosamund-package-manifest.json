@@ -4,19 +4,19 @@
   "runtimeLorebookName": "rosamund-complete-lorebook",
   "output": "rosamund-complete-lorebook.json",
   "outputEntries": 62,
-  "outputSha256": "7fc466c0accca85e647aa2ee3ecaaf1c35af14a4f7e42eb6f717486fffc2dbe5",
+  "outputSha256": "872ca29e8091ed4d49f80bffdc07346e7f66179f1313c03b42abd156811145ed",
   "installArtifacts": [
     {
       "file": "rosamund-hale.character.json",
-      "sha256": "b1b8a5775e1ff239fdb5e635aeec6580bdc970d88485940cac1066793bb5dba0"
+      "sha256": "ef724b1a59bc921cf6c02f5c3d937b199a65c2239095b4be2c69ad198fdeb05f"
     },
     {
       "file": "rosamund-complete-lorebook.json",
-      "sha256": "7fc466c0accca85e647aa2ee3ecaaf1c35af14a4f7e42eb6f717486fffc2dbe5"
+      "sha256": "872ca29e8091ed4d49f80bffdc07346e7f66179f1313c03b42abd156811145ed"
     },
     {
       "file": "rosamund-quick-replies.json",
-      "sha256": "528b667d33970ec88e12195cf40030798ab6aeedc85c2d7660278fc44dad4d23"
+      "sha256": "d3ae3debad23c5cf6dd0c45c4154e5b32a4d036212f47b00ac5ceb064465929c"
     }
   ],
   "sources": [
@@ -24,37 +24,37 @@
       "file": "archive/development/sources/rosamund-city-lorebook.json",
       "entries": 12,
       "group": "rosamund-city",
-      "sha256": "d5a69d8de9d914c1e4c91992b23dbf6a2593416fc6f8d3a5607d455d4a7c3a1c"
+      "sha256": "c502c90a28546fdfd755edc6bbd41360e6b3bce85dad77d60f212a2f895754fb"
     },
     {
       "file": "archive/development/sources/rosamund-factions-lorebook.json",
       "entries": 12,
       "group": "rosamund-factions",
-      "sha256": "1594f1c1c387179abd124320f86553925805e3916e7f9df35002d87db3b9e3f3"
+      "sha256": "16da2e2ee3f86e5a00585a3baed1035db0c3e4b56b3897be5dd996158c0b9436"
     },
     {
       "file": "archive/development/sources/rosamund-cast-lorebook.json",
       "entries": 9,
       "group": "rosamund-cast",
-      "sha256": "69ff5b9618661451da085a24c0ea93d7d78764db0f42eee903396734b0e4baab"
+      "sha256": "d51bd778aa112a914d876ac62b70d486e0b6f51232d26229ce067f49268a3f3d"
     },
     {
       "file": "archive/development/sources/rosamund-rules-lorebook.json",
       "entries": 11,
       "group": "rosamund-rules",
-      "sha256": "7ce8912459d8a5d8313728bf1cb2d7cf60ce8d62568c2dcfac5f01b9c8d3d78e"
+      "sha256": "186fb4dbd6719b08c69022946fef3ea6c2b583cf680c3f72311989752f87c719"
     },
     {
       "file": "archive/development/sources/rosamund-core-cases-lorebook.json",
       "entries": 12,
       "group": "rosamund-core-case",
-      "sha256": "d6225aade0e6418c8961fc7cfd08f06666279a32a5c11aad0e1ce0ae6dc12fc5"
+      "sha256": "38511351a4c2603f25bb12c5cd9b63b4bf1ac10a70dfffabe9389c7321941c5a"
     },
     {
       "file": "archive/development/sources/rosamund-hale-story-stages-lorebook.json",
       "entries": 6,
       "group": "rosamund-story-stage",
-      "sha256": "a5622d3f8bec93d7a45563ea05699c020dedce70640372791e47b00a9308ed9d"
+      "sha256": "2f09999092c88ac9f63d805dd9a40c29000dbafd3f4e1bfe8cc5bbae37b3e95f"
     }
   ]
 }

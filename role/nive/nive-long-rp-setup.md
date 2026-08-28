@@ -27,7 +27,7 @@
 4. 保持 Position 为 `In Story String / Prompt Manager`。
 5. 将 Persona 锁定到妮薇角色或当前聊天。
 
-当前 Persona 保留姓名、种族、性别、具体年龄、职业和外貌的自由。准备长期使用同一个主角时，再把这些字段逐步补齐。
+当前 Persona 保留姓名、种族、性别、职业和外貌的自由。准备长期使用同一个主角时，再把这些字段逐步补齐。
 
 ## 三　导入双人 Character Lore
 

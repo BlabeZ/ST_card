@@ -8,7 +8,7 @@
 
 ## 分析边界
 
-第三方素材部分读取了 8 张 PNG 的文本块，解析 `chara`、`ccv3`、角色卡字段、内嵌世界书和扩展配置。自制包对比部分读取了 `agents.md`、`docs/analysis/project-structure.md`、`docs/analysis/role-package-comparison.md`，并检查了 `role/` 下的角色卡、世界书、Quick Reply、README、开发源和现有测试。
+第三方素材部分读取了 8 张 PNG 的文本块，解析 `chara`、`ccv3`、角色卡字段、内嵌世界书和扩展配置。自制包对比部分读取了 `AGENTS.md`、`docs/analysis/project-structure.md`、`docs/analysis/role-package-comparison.md`，并检查了 `role/` 下的角色卡、世界书、Quick Reply、README、开发源和现有测试。
 
 本次没有启动或导入 SillyTavern，没有执行 Regex 生成的脚本，没有加载远程资源，也没有修改第三方目录。涉及实际注入、扩展兼容、沙箱和 UI 行为的判断均为静态风险结论，需要在目标 SillyTavern 版本中复现。
 

@@ -562,7 +562,7 @@ class CampaignContentContractTests(unittest.TestCase):
         for value in (
             "漫画 Earth-616",
             "2008 年不得出现 Oscorp",
-            "Peter Parker 此时尚非活跃英雄",
+            "索尼角色经历或活跃蜘蛛侠",
             "神奇四侠",
             "X 战警",
             "Avengers 尚未成立",
