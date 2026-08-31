@@ -63,7 +63,7 @@
 - `xie-zhaoning-persona.md`：谢昭宁 Persona。
 - `lanjin-worldbook.json`：隐秘社会、能力阶段和首案阶段。
 - `Qin Zheng.png`：带 `chara` 元数据的可导入 PNG 卡，分析时与 JSON 卡一致。
-- `秦峥.png`、`谢昭宁.png`：普通立绘。
+- `秦峥.png`：普通立绘。
 - 没有同步脚本。修改角色卡时不能假定 JSON 和 PNG 会自动同步。
 
 ### `nive`

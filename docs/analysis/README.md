@@ -9,10 +9,11 @@
 | [`project-structure.md`](project-structure.md) | 仓库目录、八个自制角色包、技术栈、生成物边界和验证入口 | 修改角色包、寻找开发源、判断文件是否可直接编辑时 |
 | [`presets-catalog.md`](presets-catalog.md) | `sillytavernassets-main/presets/` 的类型统计、预设系列用途、版本差异和配套附件 | 选择预设、比较系列、排查配套正则时 |
 | [`cards-third-party-construction-analysis.md`](cards-third-party-construction-analysis.md) | `sillytavernassets-main/cards/` 全库的字段、开场、世界书、预设、状态、脚本、版本、破限风险和可迁移架构 | 设计复杂新包、状态系统、检索、输出协议或审计第三方卡时 |
-| [`cards-loli-analysis.md`](cards-loli-analysis.md) | 高风险子目录的卡片形态、世界书、备用开场、脚本风险、重复和不可达条目 | 直接审计该目录或追溯专题统计时；普通结构设计优先读综合分析 |
-| [`cards-training-analysis.md`](cards-training-analysis.md) | 成人权力交换题材、持续同意、可逆阶段、状态协议、脚本风险和成年自愿重写方法 | 设计成年自愿关系阶段、暂停与撤回协议或审计相关第三方内容时 |
+| [`cards-high-risk-analysis.md`](cards-high-risk-analysis.md) | 高风险专题样本的卡片形态、世界书、备用开场、脚本风险、重复和不可达条目 | 直接审计该专题或追溯结构统计时；普通结构设计优先读综合分析 |
+| [`cards-training-analysis.md`](cards-training-analysis.md) | 专题样本的产品形态、阶段状态、世界书、Regex、TavernHelper 和工程迁移方法 | 设计关系阶段、状态工具或审计相关第三方实现时 |
 | [`role-package-comparison.md`](role-package-comparison.md) | 八个自制角色包与第三方成熟结构的逐包对比、缺陷和改进优先级 | 规划角色包迭代、修复运行问题或统一创作标准时 |
 | [`../../AGENTS.md`](../../AGENTS.md) | 常驻制作基线、项目边界、分析文档路由和验证命令 | 每次在仓库内工作时 |
+| [`../../CONTENT-CONSTRAINTS.md`](../../CONTENT-CONSTRAINTS.md) | 内容与合规唯一来源 | 需要核对内容与合规时 |
 
 ## 使用原则
 
